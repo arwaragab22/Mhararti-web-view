@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v4.1.1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+<title>Maharati</title>
+<link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+
+<!-- Bootstrap core CSS -->
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="dist/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css"/>
+<link href="dist/css/styles.css" rel="stylesheet"/>
+<!-- Custom styles for this template -->
+<link href="album.css" rel="stylesheet"/>
+<style>
+  .job-icon {
+  margin-top: -55px;
+  margin-left: -11px !important;
+}
+</style>
+<script>
+  //var job = 1;
+  	var jobs = new Array();
+	var jobs2 = new Array();
+	var jobs3 = new Array();
+	var jobs4 = new Array();
+	var jobs5 = new Array();
+	localStorage.setItem("enterSkills24", 3);
+	localStorage.setItem("f003",1);
+	var myIndex = 0;
+  //var jobsList = new Array();
+</script>
+</head>
+<body>
+    <header class="fixed-top mb-5">
+        <div class="navbar navbar-dark bg-primary">
+            <div class="container d-flex justify-content-between">
+              <a  onclick="prevlink()" class="previous round text-white text-xl" >❮</a> 
+              <a href="home.html" class="navbar-brand d-flex align-items-center m-auto"> <img src="../shared_dist/images/logo.svg" alt="" height="30px;" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="container-menu" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+      <div class="container pb-1 text-center">
+        <p class="text-white text-12">Please choose your language</p>
+        <a  onclick="selectlangen()" type="button" class="btn btn-light bg-transparent-50 text-white text-shadow pr-4 pl-4 mr-2"> <span><img src="dist/images/en.svg" alt="" width="30px"/></span> English</a>
+        <a onclick="selectlangar()" type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 ml-2 changeLanguage" href="../ar/apply-for-job.html"> العربية <span><img src="../shared_dist/images/ar.svg" alt="" width="30px"/></span> </a> </div>
+      <div class="container pt-1 pb-2 text-center pr-5 pl-5"> <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block" href="rating.html"> <span><img src="dist/images/rate.svg" alt="" width="30px"/></span> Rate Maharati App</a> </div>
+      <div class="container text-center pr-5 pl-5"> <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block surveylink" href="#"> <span><img src="dist/images/survey.svg" alt="" width="30px"/></span> Survey</a> </div>
+    </div> -->
+        <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+            <div class="container p-1 text-center">
+                <div style="display:flex;margin:auto;justify-content: center;gap:18px; color:white">
+
+                    <div><a style="cursor: pointer" href="rating.html">  <img src="../shared_dist/iconsmenu/Group.png" width="20px" height="20px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;">Rate us</p></a></div>
+
+
+                    <div> <a class="surveylink" style="cursor: pointer" href=""><img src="../shared_dist/iconsmenu/Vector.png" width="20px" height="20px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;"> Survey</p></a></div>
+                    <div>
+                        <a style="cursor: pointer" onclick=" selectlangar()" href="../ar/skills-24.html"><img src="../shared_dist/images/ar.svg" width="30px" height="22px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;">Language</p></a>
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="why-cv.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group747.png" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">CV Tips</div>
+                        </a>
+                    </div>
+                    <div style="width: 40%;">
+                        <a href="my-cv.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group746.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">  CV Builder</div>
+                        </a>
+
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly; ">
+
+                    <div style="width: 40%;">
+                        <a href="skills.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group748.png" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">Skills Assessment</div>
+                        </a>
+                    </div>   <div style="width: 40%;">
+                        <a href="vr.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group749.png" width="55px" />
+                            <div style="margin-top:7px ;font-size: 14px;font-weight: bold;">The Interview</div>
+                        </a>
+                    </div>
+
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="practice-interview.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group753.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Practice Interview</div>
+                        </a>
+                    </div>   <div style="width: 40%;">
+                        <a href="marketing-myself.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group752.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Marketing Myself</div>
+                        </a>
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="job.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group751.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">  Job Announcement</div>
+                        </a>
+                    </div>  <div style="width: 40%;">
+                        <a href="apply-for-job.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group750.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Apply for a job</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- <p class="text-white text-12">يرجى اختيار لغتك</p>
+              <a   onclick="selectlangen()"  href="../en/apply-for-job.html" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4  mr-2 changeLanguage" > <span><img src="dist/images/en.svg" alt="" width="30px"/></span> English</a>
+              <a  onclick="selectlangar()"type="button" class="btn btn-light bg-transparent-50 text-white text-shadow pr-4 pl-4 ml-2"> <span><img src="../shared_dist/images/ar.svg" alt="" width="30px"/></span> العربية </a>
+            </div>
+              <div class="container pt-1 pb-2 text-center pr-5 pl-5">
+                <a type="button"class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block"href="rating.html"><span><img src="dist/images/rate.svg" alt="" width="30px" style="    margin-left: 8px;"/></span>قيم تطبيق مهاراتي</a>
+              </div>
+              <div class="container text-center pr-5 pl-5">
+                <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block surveylink" href="#"><span><img src="dist/images/survey.svg" alt="" width="30px"  style="    margin-left: 8px;"/></span>إستطلاع الرأى</a>  -->
+            </div>
+        </div>
+        <img src="../shared_dist/images/menu-shad.svg" alt="" width="100%" />
+    </header>
+<main role="main" class="mb-100 mt-100">
+  <section class="pl-4 pr-4">
+    <div class="text-center">
+      <p class="btn border-10 bg-red text-uppercase font-weight-bold text-white m-0 pl-5 pr-5" style="margin-bottom: -9px !important;">PRACTICE</p>
+    </div>
+    <div class="bg-green border-30 pt-3 border-top-red">
+      <div class="row pl-4 pr-4">
+        <div class="col-8 text-white pr-0">
+          <h5 class="font-weight-bold">Skills Assessment</h5>
+          <p>How to assess yourself / identify your skills?</p>
+        </div>
+        <div class="col-4"><img src="../shared_dist/images/Skills-icon.svg" alt="" width="100%" /></div>
+      </div>
+      <div class="bg-white border-30 p-4 box-shad-2">
+        <div class="row">
+          <div class="col-12 h4 text-green font-weight-bold">My Skills </div>
+          <!--<div class="col-2 p-0 text-medium text-red pt-1"> </div>
+          <div class="col-1 text-center p-0"> <a href="#" class="previous round text-xl text-green text-opacity-50">❮</a> </div>
+          <div class="col-1 text-center p-0"> <a href="skills-9.html" class="next round text-xl text-green">❯</a> </div>--> 
+        </div>
+        <div class="form1">
+          <p class="text-16">Writing your Skills: Job 1</p>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Past Jobs</label>
+            <input type="text" class="form-control" id="job1" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Place</label>
+            <input type="text" class="form-control" id="job2" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Main duties</label>
+            <textarea class="form-control" id="job3" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Content skills and knowledge </label>
+            <textarea class="form-control" id="job4" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Self-management skills</label>
+            <textarea class="form-control" id="job5" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Other activities you do</label>
+            <textarea class="form-control" id="job6" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Place, community, school, sports club etc.</label>
+            <textarea class="form-control" id="job7" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Main activities</label>
+            <textarea class="form-control" id="job8" aria-describedby="" placeholder="" ></textarea>
+          </div>
+        </div>
+        <div class="form2">
+          <p class="text-16">Writing your Skills: Job 2</p>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Past Jobs</label>
+            <input type="text" class="form-control" id="job1_2" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Place</label>
+            <input type="text" class="form-control" id="job2_2" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Main duties</label>
+            <textarea class="form-control" id="job3_2" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Content skills and knowledge </label>
+            <textarea class="form-control" id="job4_2" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Self-management skills</label>
+            <textarea class="form-control" id="job5_2" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Other activities you do</label>
+            <textarea class="form-control" id="job6_2" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Place, community, school, sports club etc.</label>
+            <textarea class="form-control" id="job7_2" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Main activities</label>
+            <textarea class="form-control" id="job8_2" aria-describedby="" placeholder="" ></textarea>
+          </div>
+        </div>
+        <div class="form3">
+          <p class="text-16">Writing your Skills: Job 3</p>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Past Jobs</label>
+            <input type="text" class="form-control" id="job1_3" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Place</label>
+            <input type="text" class="form-control" id="job2_3" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Main duties</label>
+            <textarea class="form-control" id="job3_3" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Content skills and knowledge </label>
+            <textarea class="form-control" id="job4_3" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Self-management skills</label>
+            <textarea class="form-control" id="job5_3" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Other activities you do</label>
+            <textarea class="form-control" id="job6_3" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Place, community, school, sports club etc.</label>
+            <textarea class="form-control" id="job7_3" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Main activities</label>
+            <textarea class="form-control" id="job8_3" aria-describedby="" placeholder="" ></textarea>
+          </div>
+        </div>
+        <div class="form4">
+          <p class="text-16">Writing your Skills: Job 4</p>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Past Jobs</label>
+            <input type="text" class="form-control" id="job1_4" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Place</label>
+            <input type="text" class="form-control" id="job2_4" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Main duties</label>
+            <textarea class="form-control" id="job3_4" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Content skills and knowledge </label>
+            <textarea class="form-control" id="job4_4" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Self-management skills</label>
+            <textarea class="form-control" id="job5_4" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Other activities you do</label>
+            <textarea class="form-control" id="job6_4" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Place, community, school, sports club etc.</label>
+            <textarea class="form-control" id="job7_4" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Main activities</label>
+            <textarea class="form-control" id="job8_4" aria-describedby="" placeholder="" ></textarea>
+          </div>
+        </div>
+        <div class="form5">
+          <p class="text-16">Writing your Skills: Job 5</p>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Past Jobs</label>
+            <input type="text" class="form-control" id="job1_5" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Place</label>
+            <input type="text" class="form-control" id="job2_5" aria-describedby="" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="">Main duties</label>
+            <textarea class="form-control" id="job3_5" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Content skills and knowledge </label>
+            <textarea class="form-control" id="job4_5" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Self-management skills</label>
+            <textarea class="form-control" id="job5_5" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Other activities you do</label>
+            <textarea class="form-control" id="job6_5" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Place, community, school, sports club etc.</label>
+            <textarea class="form-control" id="job7_5" aria-describedby="" placeholder="" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="">Main activities</label>
+            <textarea class="form-control" id="job8_5" aria-describedby="" placeholder="" ></textarea>
+          </div>
+        </div>
+        <div class="form6">
+          <p class="text-16">You have only 5 jobs to be listed!</p>
+        </div>
+        <div class="text-center pt-4"><a href="#" class="btn border-10 bg-green font-weight-bold box-shad-2 text-white" id="backButton">Back</a> <a href="#" class="btn border-10 bg-green font-weight-bold box-shad-2 text-white newjob " id="addNewJob" >Add New Job</a> <a href="skills-25.html" class="btn border-10 bg-melon font-weight-bold box-shad-2 text-white saveBtn disabled" role="button">Done</a> </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="text-muted fixed-bottom pt-3 pb-3 bg-footer">
+  <div class="row d-flex justify-content-around" style="padding:0px 30px;">
+    <div class="col-2 pl-0 text-left"><a href="home.html" class="d-block"><img src="../shared_dist/images/icon-one.png" alt="" width="40px" height="40px" /></a></div>
+    <div class="col-2 pl-0 text-left"><a href="my-cv.html" class="d-block"><img src="../shared_dist/images/icon-two.png" alt="" width="40px" height="40px"/></a></div>
+    <div class="col-2 job-icon" style=""><a href="apply-for-job.html" class="d-block"><img src="../shared_dist/images/job-icon.svg" alt="" width="70px" class="rounded-circle shadow" /></a></div>
+    <div class="col-2 pr-0 text-right"><a href="ar_instructions.html" class="d-block"><img src="../shared_dist/images/icon-three.png" alt="" width="40px" height="40px"/></a></div>
+    <div class="col-2 pr-0 text-right"><a href="vr.html" class="d-block"><img src="../shared_dist/images/icon-four.png" alt="" width="48px" height="40px"/></a></div>
+  </div>
+</footer>
+<script src="../ar/dist/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="../ar/dist/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="../ar/dist/js/bootstrap.js"></script>
+<script src="../ar/dist/js/bootstrap.bundle.min.js"></script>
+<script src="dist/slick/slick.js" type="text/javascript" charset="utf-8"></script> 
+<script type="text/javascript">
+	$('textarea, input[type="text"]').keyup(function(){
+		var check = 0;
+		$('textarea, input[type="text"]').each(function(){
+			var val = $(this).val();
+			if (val == null || val == ""){
+				check +=1;
+			}
+		});
+		
+		if (check <= 8){
+			
+			
+			$(".saveBtn").removeClass("disabled");
+		} else {
+			$("#addNewJob").show();
+			$(".saveBtn").removeClass("disabled");
+		}
+	});
+	
+	$(document).ready(function(){
+		
+		$(".form2").hide();
+		$(".form3").hide();
+		$(".form4").hide();
+		$(".form5").hide();
+		$(".form6").hide();
+		$("#addNewJob").hide();
+		$("#backButton").hide();
+		var myBackIndex = 5;
+		$("#addNewJob").on('click', function(){
+			myIndex = myIndex + 1;
+			localStorage.setItem("jobsRecords", myIndex);
+			//alert("New page index =" + myIndex);
+			if(myIndex == 1){$(".form1").hide();$(".form2").show(); $("#backButton").show();}
+			if(myIndex == 2){$(".form2").hide();$(".form3").show(); }
+			if(myIndex == 3){$(".form3").hide();$(".form4").show(); }
+			if(myIndex == 4){$("#addNewJob").hide(); $(".form4").hide();$(".form5").show(); }
+			if(myIndex >= 5){$(".form5").hide();$(".form6").show(); $("#addNewJob").hide(); $("#backButton").show();}
+		});
+		
+		$("#backButton").on('click', function(){
+			
+			alert("Back =" + myIndex);
+			if(myIndex <= 1){myIndex = myIndex - 1;$(".form2").hide();$(".form1").show(); $("#backButton").hide();}
+			if(myIndex == 2){myIndex = myIndex - 1;$(".form3").hide();$(".form2").show(); }
+			if(myIndex == 3){myIndex = myIndex - 1;$(".form4").hide();$(".form3").show(); }
+			if(myIndex == 4){myIndex = myIndex - 1;$(".form5").hide();$(".form4").show(); $("#addNewJob").show();}
+			if(myIndex == 5){myIndex = myIndex - 1;$(".form6").hide();$(".form5").show(); $("#backButton").show();}
+		});
+		
+		//First Form
+		$('input[id="job1"]').on('change', function(){
+			localStorage.setItem('job1', $(this).val());
+      jobs.push(localStorage.getItem('job1'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('input[id="job2"]').on('change', function(){
+			localStorage.setItem('job2', $(this).val());
+      jobs.push(localStorage.getItem('job2'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('textarea[id="job3"]').on('change', function(){
+			localStorage.setItem('job3', $(this).val());
+      jobs.push(localStorage.getItem('job3'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('textarea[id="job4"]').on('change', function(){
+			localStorage.setItem('job4', $(this).val());
+      jobs.push(localStorage.getItem('job4'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('textarea[id="job5"]').on('change', function(){
+			localStorage.setItem('job5', $(this).val());
+      jobs.push(localStorage.getItem('job5'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('textarea[id="job6"]').on('change', function(){
+			localStorage.setItem('job6', $(this).val());
+      jobs.push(localStorage.getItem('job6'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('textarea[id="job7"]').on('change', function(){
+			localStorage.setItem('job7', $(this).val());
+      jobs.push(localStorage.getItem('job7'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('textarea[id="job8"]').on('change', function(){
+			localStorage.setItem('job8', $(this).val());
+      jobs.push(localStorage.getItem('job8'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+      $('textarea[id="job9"]').on('change', function(){
+			localStorage.setItem('job9', $(this).val());
+      jobs.push(localStorage.getItem('job9'));
+      localStorage.setItem("jobs", JSON.stringify(jobs));
+			});
+		
+	//Second Form
+	
+		$('input[id="job1_2"]').on('change', function(){
+			localStorage.setItem('job1_2', $(this).val());
+      jobs2.push(localStorage.getItem('job1_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('input[id="job2_2"]').on('change', function(){
+			localStorage.setItem('job2_2', $(this).val());
+      jobs2.push(localStorage.getItem('job2_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('textarea[id="job3_2"]').on('change', function(){
+			localStorage.setItem('job3_2', $(this).val());
+      jobs2.push(localStorage.getItem('job3_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('textarea[id="job4_2"]').on('change', function(){
+			localStorage.setItem('job4_2', $(this).val());
+      jobs2.push(localStorage.getItem('job4_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('textarea[id="job5_2"]').on('change', function(){
+			localStorage.setItem('job5_2', $(this).val());
+      jobs2.push(localStorage.getItem('job5_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('textarea[id="job6_2"]').on('change', function(){
+			localStorage.setItem('job6_2', $(this).val());
+      jobs2.push(localStorage.getItem('job6_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('textarea[id="job7_2"]').on('change', function(){
+			localStorage.setItem('job7_2', $(this).val());
+      jobs2.push(localStorage.getItem('job7_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('textarea[id="job8_2"]').on('change', function(){
+			localStorage.setItem('job8_2', $(this).val());
+      jobs2.push(localStorage.getItem('job8_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+      $('textarea[id="job9_2"]').on('change', function(){
+			localStorage.setItem('job9_2', $(this).val());
+      jobs2.push(localStorage.getItem('job9_2'));
+      localStorage.setItem("jobs2", JSON.stringify(jobs2));
+			});
+	
+		
+		//Form 3
+		
+		$('input[id="job1_3"]').on('change', function(){
+			localStorage.setItem('job1_3', $(this).val());
+      jobs3.push(localStorage.getItem('job1_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('input[id="job2_3"]').on('change', function(){
+			localStorage.setItem('job2_3', $(this).val());
+      jobs3.push(localStorage.getItem('job2_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('textarea[id="job3_3"]').on('change', function(){
+			localStorage.setItem('job3_3', $(this).val());
+      jobs3.push(localStorage.getItem('job3_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('textarea[id="job4_3"]').on('change', function(){
+			localStorage.setItem('job4_3', $(this).val());
+      jobs3.push(localStorage.getItem('job4_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('textarea[id="job5_3"]').on('change', function(){
+			localStorage.setItem('job5_3', $(this).val());
+      jobs3.push(localStorage.getItem('job5_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('textarea[id="job6_3"]').on('change', function(){
+			localStorage.setItem('job6_3', $(this).val());
+      jobs3.push(localStorage.getItem('job6_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('textarea[id="job7_3"]').on('change', function(){
+			localStorage.setItem('job7_3', $(this).val());
+      jobs3.push(localStorage.getItem('job7_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('textarea[id="job8_3"]').on('change', function(){
+			localStorage.setItem('job8_3', $(this).val());
+      jobs3.push(localStorage.getItem('job8_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+      $('textarea[id="job9_3"]').on('change', function(){
+			localStorage.setItem('job9_3', $(this).val());
+      jobs3.push(localStorage.getItem('job9_3'));
+      localStorage.setItem("jobs3", JSON.stringify(jobs3));
+			});
+	
+	
+		//Form 4
+		
+		$('input[id="job1_4"]').on('change', function(){
+			localStorage.setItem('job1_4', $(this).val());
+      jobs4.push(localStorage.getItem('job1_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('input[id="job2_4"]').on('change', function(){
+			localStorage.setItem('job2_4', $(this).val());
+      jobs4.push(localStorage.getItem('job2_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('textarea[id="job3_4"]').on('change', function(){
+			localStorage.setItem('job3_4', $(this).val());
+      jobs4.push(localStorage.getItem('job3_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('textarea[id="job4_4"]').on('change', function(){
+			localStorage.setItem('job4_4', $(this).val());
+      jobs4.push(localStorage.getItem('job4_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('textarea[id="job5_4"]').on('change', function(){
+			localStorage.setItem('job5_4', $(this).val());
+      jobs4.push(localStorage.getItem('job5_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('textarea[id="job6_4"]').on('change', function(){
+			localStorage.setItem('job6_4', $(this).val());
+      jobs4.push(localStorage.getItem('job6_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('textarea[id="job7_4"]').on('change', function(){
+			localStorage.setItem('job7_4', $(this).val());
+      jobs4.push(localStorage.getItem('job7_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('textarea[id="job8_4"]').on('change', function(){
+			localStorage.setItem('job8_4', $(this).val());
+      jobs4.push(localStorage.getItem('job8_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+      $('textarea[id="job9_4"]').on('change', function(){
+			localStorage.setItem('job9_4', $(this).val());
+      jobs4.push(localStorage.getItem('job9_4'));
+      localStorage.setItem("jobs4", JSON.stringify(jobs4));
+			});
+	
+		
+		//Form 5
+		
+		$('input[id="job1_5"]').on('change', function(){
+			localStorage.setItem('job1_5', $(this).val());
+      jobs5.push(localStorage.getItem('job1_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('input[id="job2_5"]').on('change', function(){
+			localStorage.setItem('job2_5', $(this).val());
+      jobs5.push(localStorage.getItem('job2_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('textarea[id="job3_5"]').on('change', function(){
+			localStorage.setItem('job3_5', $(this).val());
+      jobs5.push(localStorage.getItem('job3_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('textarea[id="job4_5"]').on('change', function(){
+			localStorage.setItem('job4_5', $(this).val());
+      jobs5.push(localStorage.getItem('job4_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('textarea[id="job5_5"]').on('change', function(){
+			localStorage.setItem('job5_5', $(this).val());
+      jobs5.push(localStorage.getItem('job5_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('textarea[id="job6_5"]').on('change', function(){
+			localStorage.setItem('job6_5', $(this).val());
+      jobs5.push(localStorage.getItem('job6_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('textarea[id="job7_5"]').on('change', function(){
+			localStorage.setItem('job7_5', $(this).val());
+      jobs5.push(localStorage.getItem('job7_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('textarea[id="job8_5"]').on('change', function(){
+			localStorage.setItem('job8_5', $(this).val());
+      jobs5.push(localStorage.getItem('job8_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+      $('textarea[id="job9_5"]').on('change', function(){
+			localStorage.setItem('job9_5', $(this).val());
+      jobs5.push(localStorage.getItem('job9_5'));
+      localStorage.setItem("jobs5", JSON.stringify(jobs5));
+			});
+	
+	
+	});
+	
+	
+  
+    $(document).on('ready', function() {$('#back-btn').on('click', function(e) {window.history.go(-1);return false;})
+        $(".center").slick({
+        dots: true,
+		arrows: false,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		/*autoplay: true,
+		autoplaySpeed: 3000,*/
+      });
+		$(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+	});
+</script> 
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+
+// function addNewJob(){
+//     job = job +1;
+//     localStorage.setItem("job",job);
+//     jobsList.push(localStorage.getItem('jobs'));
+//     localStorage.setItem("jobsList",jobsList);
+//     document.getElementById('job1').value = '';
+//     document.getElementById('job2').value = '';
+//     document.getElementById('job3').value = '';
+//     document.getElementById('job4').value = '';
+//     document.getElementById('job5').value = '';
+//     document.getElementById('job6').value = '';
+//     document.getElementById('job7').value = '';
+//     document.getElementById('job8').value = '';
+//     document.getElementById('job9').value = '';
+//     alert("Add new job!");
+//   }
+$('.surveylink').click(function(){
+  Survey()
+});
+function Survey(){
+  SurveyDartSide.postMessage("survey");
+}
+
+$('.changeLanguage').click(function(){
+     changeLanguage();
+   });
+function changeLanguage(){
+	ChangeLangDartSide.postMessage("false");
+   }
+</script><script>
+
+  function selectlangen() { changeLanguage();
+    localStorage.setItem("language","en");
+    window.Location.href="../en/apply-for-job.html"
+  
+  
+  } 
+  function selectlangar() { changeLanguage();
+      localStorage.setItem("language", "ar")
+  
+    }
+  </script> 
+<script src="../en/back.js"></script>
+
+</body>
+</html>

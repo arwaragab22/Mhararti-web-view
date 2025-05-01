@@ -1,0 +1,867 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src="js/jquery-3.5.1.min.js"></script>
+
+<!--	<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>-->
+<!--	<script src="https://maharati.ewebbers.com/vr/js/aframe0.9.2.min.js"></script>-->
+	<script src="js/aframe0.9.2.min.js"></script>
+
+	<script src="js/aframe-ar.js"></script>
+	<script src="js/aframe-extras.min.js"></script>
+<!--	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>-->
+	
+	<script src="js/aframe-event-set-component.min.js"></script>
+	<script src="js/aframe-play-sound-on-event.min.js"></script>
+<!--	<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>-->
+<!--	  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>-->
+		  <script src="js/aframe-look-at-component.min.js"></script> 
+	<script src="js/gesture-detector.js"></script>
+	<script src="js/gesture-handler.js"></script>
+	<script src="js/scale-handler.js"></script>
+	
+</head>
+
+<body>
+<script>
+
+	
+	/*
+	var voice = new Howl({
+  src: ['./sounds/introvoice.mp3'],
+  autoplay: true,
+  preload: true,
+  loop: true,
+  volume: 1
+});*/
+	//voice.play();
+	
+	/*
+	var firstsound=0;
+	
+	AFRAME.registerComponent('myscene', {
+			
+		init: function (){
+					
+					
+			//if (document.querySelector('a-marker').object3D.visible == true) {
+			   //this.el.components.sound.playSound();
+				if(firstsound==0){
+					
+				document.querySelector('[ilogirlmodel]').components.sound.playSound();
+					}
+			//}
+					
+		}
+		
+	});
+		*/
+	
+	/*
+	var soundembed=1;
+
+		AFRAME.registerComponent('mymarker', {
+    tick: function () {
+		
+		
+		if ((document.querySelector('a-marker').object3D.visible == true) && soundembed==1) {
+			//alert(soundembed);
+			$('#ilogirl').attr('sound','on:sound-loaded;  src:#introvoice; autoplay: true; loop:false; distanceModel:linear; volume:2');
+			$('#ilogirl').attr('animation-mixer','clip:speak;');
+			
+			soundembed=0;
+			
+			
+		}
+			
+			
+			
+		}});
+		*/
+	
+	
+	
+	
+		AFRAME.registerComponent('ilogirlmodel', {
+    init: function () {
+		this.el.addEventListener('sound-ended', function(){
+		
+		$('#ilogirl').attr('animation-mixer','clip:idle;');
+			
+			});
+			
+		}});
+	
+	
+	
+	
+	
+		AFRAME.registerComponent('rbtn', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(e){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('#rpanel').attr('visible','true');
+			
+			$('.exbtn').removeClass('clickable');
+			$('#rpanel .exbtn').addClass('clickable');
+//<!--		$('.rcareerpanel').attr('visible','true');-->
+			
+			
+			
+			
+			
+			
+			$('#ilogirl').attr('sound','on:sound-loaded;  src:#rsound; autoplay: true; loop:false; distanceModel:linear; volume:2');
+			$('#ilogirl').attr('animation-mixer','clip:speak;');
+			
+			/*
+			var allsounds = document.querySelectorAll('[sound]');
+			for(var ix=0; ix<allsounds.length; ix++ ){
+			  allsounds[ix].components.sound.stopSound();
+				e.target.components.sound.playSound();
+				}*/
+			
+			
+			
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('ibtn', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(e){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('#ipanel').attr('visible','true');
+			
+			$('.exbtn').removeClass('clickable');
+			$('#ipanel .exbtn').addClass('clickable');
+//<!--		$('.icareerpanel').attr('visible','true');-->
+			
+			$('#ilogirl').attr('sound','on:sound-loaded;  src:#isound; autoplay: true; loop:false; distanceModel:linear; volume:2');
+			$('#ilogirl').attr('animation-mixer','clip:speak;');
+			
+			
+			/*
+			var allsounds = document.querySelectorAll('[sound]');
+			for(var ix=0; ix<allsounds.length; ix++ ){
+			  allsounds[ix].components.sound.stopSound();
+				e.target.components.sound.playSound();
+				}*/
+			
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('abtn', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(e){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('#apanel').attr('visible','true');
+			
+			$('.exbtn').removeClass('clickable');
+			$('#apanel .exbtn').addClass('clickable');
+//<!--		$('.acareerpanel').attr('visible','true');-->
+			
+			$('#ilogirl').attr('sound','on:sound-loaded;  src:#asound; autoplay: true; loop:false; distanceModel:linear; volume:2');
+			$('#ilogirl').attr('animation-mixer','clip:speak;');
+			/*
+			var allsounds = document.querySelectorAll('[sound]');
+			for(var ix=0; ix<allsounds.length; ix++ ){
+			  allsounds[ix].components.sound.stopSound();
+				e.target.components.sound.playSound();
+				}*/
+			
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		AFRAME.registerComponent('sbtn', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(e){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('#spanel').attr('visible','true');
+			
+			$('.exbtn').removeClass('clickable');
+			$('#spanel .exbtn').addClass('clickable');
+//<!--			$('.scareerpanel').attr('visible','true');-->
+			
+			$('#ilogirl').attr('sound','on:sound-loaded;  src:#ssound; autoplay: true; loop:false; distanceModel:linear; volume:2');
+			$('#ilogirl').attr('animation-mixer','clip:speak;');
+			/*
+			var allsounds = document.querySelectorAll('[sound]');
+			for(var ix=0; ix<allsounds.length; ix++ ){
+			  allsounds[ix].components.sound.stopSound();
+				e.target.components.sound.playSound();
+				}*/
+			
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('ebtn', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(e){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('#epanel').attr('visible','true');
+			
+			$('.exbtn').removeClass('clickable');
+			$('#epanel .exbtn').addClass('clickable');
+//<!--			$('.ecareerpanel').attr('visible','true');-->
+			
+			$('#ilogirl').attr('sound','on:sound-loaded;  src:#esound; autoplay: true; loop:false; distanceModel:linear; volume:2');
+			$('#ilogirl').attr('animation-mixer','clip:speak;');
+			
+			/*
+			var allsounds = document.querySelectorAll('[sound]');
+			for(var ix=0; ix<allsounds.length; ix++ ){
+			  allsounds[ix].components.sound.stopSound();
+				e.target.components.sound.playSound();
+				}*/
+			
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		AFRAME.registerComponent('cbtn', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(e) {
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('#cpanel').attr('visible','true');
+			
+			$('.exbtn').removeClass('clickable');
+			$('#cpanel .exbtn').addClass('clickable');
+//<!--			$('.ccareerpanel').attr('visible','true');-->
+			//alert(1);
+			
+			$('#ilogirl').attr('sound','on:sound-loaded;  src:#csound; autoplay: true; loop:false; distanceModel:linear; volume:2');
+			$('#ilogirl').attr('animation-mixer','clip:speak;');
+			/*
+			var allsounds = document.querySelectorAll('[sound]');
+			for(var ix=0; ix<allsounds.length; ix++ ){
+			  allsounds[ix].components.sound.stopSound();
+				e.target.components.sound.playSound();
+				}*/
+			
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* */
+		
+		
+		
+		AFRAME.registerComponent('rcareer', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('.rcareerpanel').attr('visible','true');
+			$('.exbtn').removeClass('clickable');
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('icareer', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('.icareerpanel').attr('visible','true');
+			$('.exbtn').removeClass('clickable');
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('acareer', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('.acareerpanel').attr('visible','true');
+			$('.exbtn').removeClass('clickable');
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('scareer', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('.scareerpanel').attr('visible','true');
+			$('.exbtn').removeClass('clickable');
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('ecareer', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('.ecareerpanel').attr('visible','true');
+			$('.exbtn').removeClass('clickable');
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		AFRAME.registerComponent('ccareer', {
+				init: function (){
+		this.el.addEventListener('mouseenter', function(){
+			   
+			   $(this).addClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('mouseleave', function(){
+			
+				$(this).removeClass('activebtn');
+			   
+			});
+					
+		this.el.addEventListener('click', function(){
+		
+				var rTimeout = setTimeout(rbtnfun, 46);
+
+		function rbtnfun() {
+			$('.panels').attr('visible','false');
+			$('.ccareerpanel').attr('visible','true');
+			$('.exbtn').removeClass('clickable');
+			
+			
+		}
+						
+		if(!$(this).hasClass("activebtn")){
+			clearTimeout(rTimeout);
+		}
+		
+		});
+		}
+		
+		});
+		
+		
+		
+		
+		
+		
+	</script>
+	
+	
+	<a-scene
+  arjs="debugUIEnabled:false; sourceType: webcam; trackingMethod: best; "
+  embedded
+			 
+  physics="debug: true"
+			 renderer="antialias:true;colorManagement: true;logarithmicDepthBuffer: true;highRefreshRate:true;foveationLevel:0;sortObjects:false;physicallyCorrectLights:true;
+maxCanvasWidth:1920;maxCanvasHeight:1920;logarithmicDepthBuffer:true;precision:high;alpha:true;"
+  
+  vr-mode-ui="enabled: false"
+  gesture-detector
+  id="scene"
+			 myscene
+>
+		
+  <a-assets>
+		<a-sound id="introvoice" src="./sounds/introvoice.mp3" preload="auto" intro_voice></a-sound>
+		<a-sound id="rsound" src="./sounds/r_desc.mp3" preload="auto"></a-sound>
+		<a-sound id="isound" src="./sounds/i_desc.mp3" preload="auto"></a-sound>
+		<a-sound id="asound" src="./sounds/a_desc.mp3" preload="auto"></a-sound>
+		<a-sound id="ssound" src="./sounds/s_desc.mp3" preload="auto"></a-sound>
+		<a-sound id="esound" src="./sounds/e_desc.mp3" preload="auto"></a-sound>
+		<a-sound id="csound" src="./sounds/c_desc.mp3" preload="auto"></a-sound>
+		</a-assets>
+
+  <a-marker
+    type="pattern" url="mp.patt"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerA"
+			
+	mymarker>
+
+
+  
+	  
+	  <a-entity gltf-model="./model/ilogirl.glb" animation-mixer="clip:idle;" id="ilogirl" scale="1 1 1" position="0 0 .5"  look-at="[camera]" scaler-handler ilogirlmodel>
+		  
+<!--		  sound="on:sound-loaded;  src:#introvoice; autoplay: true; loop:false; distanceModel:linear;"-->
+		  
+		  
+		  
+		  <a-image src="qs/rtitle.png" width="2" height="4.725" scale=".2 .2 .2" position="-.45 .91 .7"  class="panels rcareerpanel" visible="false"></a-image>
+		  
+		  <a-image src="qs/ititle.png" width="2" height="4.725" scale=".2 .2 .2" position="-.45 .91 .7"  class="panels icareerpanel" visible="false"></a-image>
+		  
+		  <a-image src="qs/atitle.png" width="2" height="4.725" scale=".2 .2 .2" position="-.45 .91 .7"  class="panels acareerpanel" visible="false"></a-image>
+		  
+		  <a-image src="qs/stitle.png" width="2" height="4.725" scale=".2 .2 .2" position="-.45 .91 .7"  class="panels scareerpanel" visible="false"></a-image>
+		  
+		  <a-image src="qs/etitle.png" width="2" height="4.725" scale=".2 .2 .2" position="-.45 .91 .7"  class="panels ecareerpanel" visible="false"></a-image>
+		  
+		  <a-image src="qs/ctitle.png" width="2" height="4.725" scale=".2 .2 .2" position="-.45 .91 .7"  class="panels ccareerpanel" visible="false"></a-image>
+		  
+		  
+		  
+		  
+		  
+		  
+	  	<a-image src="qs/rpanel.png" width="5.48" height="4.87" scale=".17 .17 .17" position="-.49 .91 .7" id="rpanel" class="panels" visible="false" >
+		  	<a-image src="qs/careersbtn.png" width="3" height="0.84" scale=".85 .85 .85" position="-.6 -1.7 .01" material="alphaTest:.5" class=" exbtn rcareer" rcareer></a-image>
+		</a-image>
+		  
+		  <a-image src="qs/ipanel.png" width="5.48" height="4.87" scale=".17 .17 .17" position="-.49 .91 .7" id="ipanel" class="panels" visible="false" >
+		  	<a-image src="qs/careersbtn.png" width="3" height="0.84" scale=".85 .85 .85" position="-.6 -1.7 .01" material="alphaTest:.5" class=" exbtn icareer" icareer></a-image>
+		</a-image>
+		  
+		  <a-image src="qs/apanel.png" width="5.48" height="4.87" scale=".17 .17 .17" position="-.49 .91 .7" id="apanel" class="panels" visible="false" >
+		  	<a-image src="qs/careersbtn.png" width="3" height="0.84" scale=".85 .85 .85" position="-.6 -1.7 .01" material="alphaTest:.5" class=" exbtn acareer" acareer></a-image>
+		</a-image>
+		  
+		  <a-image src="qs/spanel.png" width="5.48" height="4.87" scale=".17 .17 .17" position="-.49 .91 .7" id="spanel" class="panels" visible="false" >
+		  	<a-image src="qs/careersbtn.png" width="3" height="0.84" scale=".85 .85 .85" position="-.6 -1.7 .01" material="alphaTest:.5" class=" exbtn scareer" scareer></a-image>
+		</a-image>
+		  
+		  <a-image src="qs/epanel.png" width="5.48" height="4.87" scale=".17 .17 .17" position="-.49 .91 .7" id="epanel" class="panels" visible="false" >
+		  	<a-image src="qs/careersbtn.png" width="3" height="0.84" scale=".85 .85 .85" position="-.6 -1.7 .01" material="alphaTest:.5" class=" exbtn ecareer" ecareer></a-image>
+		</a-image>
+		  
+		  <a-image src="qs/cpanel.png" width="5.48" height="4.87" scale=".17 .17 .17" position="-.49 .91 .7" id="cpanel" class="panels" visible="false" >
+		  	<a-image src="qs/careersbtn.png" width="3" height="0.84" scale=".85 .85 .85" position="-.6 -1.7 .01" material="alphaTest:.5" class=" exbtn ccareer" ccareer></a-image>
+		</a-image>
+		  
+	  	
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  <a-entity rotation="30 0 0" position="-.5 -.2 .2">
+		  
+		  <a-entity gltf-model="./model/empty.glb" id="mainmodel" visible="true" mouse-cursor  class="clickable"
+      gesture-handler scale="1 1 1"  rotation="0 0 0" mainmodel>
+
+		  
+		  
+	  
+		  
+			  <a-entity gltf-model="./model/rmodel.glb"  visible="true" mouse-cursor  class="clickable"
+        sound=" src:#rsound; autoplay: false; loop:false; distanceModel:linear;" rbtn ></a-entity>
+			  
+			  <a-entity gltf-model="./model/imodel.glb"  visible="true" mouse-cursor  class="clickable"
+        sound=" src:#isound; autoplay: false; loop:false; distanceModel:linear;" ibtn ></a-entity>
+			  
+			  <a-entity gltf-model="./model/amodel.glb"  visible="true" mouse-cursor  class="clickable"
+        sound=" src:#asound; autoplay: false; loop:false; distanceModel:linear;" abtn ></a-entity>
+			  
+			  <a-entity gltf-model="./model/smodel.glb"  visible="true" mouse-cursor  class="clickable"
+        sound=" src:#ssound; autoplay: false; loop:false; distanceModel:linear;" sbtn ></a-entity>
+			  
+			  <a-entity gltf-model="./model/emodel.glb"  visible="true" mouse-cursor  class="clickable"
+        sound=" src:#esound; autoplay: false; loop:false; distanceModel:linear;" ebtn ></a-entity>
+			  
+			  <a-entity gltf-model="./model/cmodel.glb"  visible="true" mouse-cursor  class="clickable"
+        sound=" src:#csound; autoplay: false; loop:false; distanceModel:linear;" cbtn ></a-entity>
+			  
+			  
+	  
+	  </a-entity>
+			  
+			  </a-entity>
+	  </a-entity>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+  </a-marker>
+  <a-entity camera>
+<!--	      <a-cursor raycaster="far: 20; interval: 0; objects: .clickable"></a-cursor>-->
+	  
+	  
+	  
+	  
+	  <a-entity light="intensity: 3; target: #ilogirl" rotation=""></a-entity>
+	  
+	  
+  </a-entity>
+</a-scene>
+	
+</body>
+</html>

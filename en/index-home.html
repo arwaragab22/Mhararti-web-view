@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v4.1.1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+<title>Maharati</title>
+<link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="dist/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css"/>
+<link href="dist/css/styles.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="album.css" rel="stylesheet">
+<style>
+  .fade-in-image {
+  animation: fadeIn .1s;
+  -webkit-animation: fadeIn .1s ease-in;
+  -moz-animation: fadeIn .1s ease-in;
+  -o-animation: fadeIn .1s ease-in;
+  -ms-animation: fadeIn .1s ease-in;
+}
+.job-icon {
+    margin-top: -55px;
+    margin-left: -11px !important;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+</style>
+</head>
+<body class="fade-in-image">
+
+<main role="main" class="h-100"> <img src="../shared_dist/images/welcome.svg" width="100%" alt=""/>
+  <section class="text-center min-vh-30" style="display: grid; align-content: center;">
+    <div class="container">
+      <h3 class="font-weight-bolder title-main pt-2">Welcome to Maharati</h3>
+      <p class="text-light-gray pr-4 pl-4">a new methodology that activates and engages youth in job search activities</p>
+      <div class="pt-2">
+        <div class="text-center"><a href="home.html" class="btn btn-primary border-20 bg-primary text-sm">Get Started &nbsp; <i class="fa fa-arrow-right fa-sm"></i> </a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../ar/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    $(document).on('ready', function() {$('#back-btn').on('click', function(e) {
+       window.history.go(-1);
+       return false;
+    })
+        $(".center").slick({
+        dots: true,
+		arrows: false,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		/*autoplay: true,
+		autoplaySpeed: 3000,*/
+      });
+		$(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+	});
+</script>
+<script>
+
+  function selectlangen() { changeLanguage();
+    localStorage.setItem("language","en");
+    window.Location.href="../en/apply-for-job.html"
+  
+  
+  } 
+  function selectlangar() { changeLanguage();
+      localStorage.setItem("language", "ar")
+  
+    }
+  </script>
+<script src="../en/back.js"></script>
+
+</body>
+</html>

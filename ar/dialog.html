@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+    <link rel="stylesheet" href="../font/css/all.css">
+<script src="../font/js/all.js"></script>
+
+
+
+
+
+  
+
+
+  <link href="../en/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+  <script src="../en/dist/js/bootstrap.js"></script>
+  <script src="../en/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="../font/bootstrap-icons.css">
+
+ 
+ 
+    <title>Document</title>
+    <style>
+            html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+  div{
+ user-zoom: none;
+ position: fixed;
+  }
+  img{
+    margin-top: 60px;
+  }
+    </style>
+</head>
+<body>
+    <div style="cursor: pointer;" onclick="backprev()" ><i class="bi bi-x font-weight-bold" 
+      style="font-size: 60px;"></i></div>
+    <img src="../ar/dist/images/exphelp2arabic.png" width="100%">
+<script>
+    function backprev(){
+        console.log("prev ")
+    //  window.location.href="../ar/cvdata-entry.html";
+    localStorage.setItem("backexp",true)
+    window.history.back(-1);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maharati</title>
+<link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+<link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="dist/css/fontawesome.min.css" rel="stylesheet" type="text/css"> -->
+<link href="dist/css/cv-onestyle.css" rel="stylesheet" type="text/css">
+
+
+<script src="../objectorianted.js"></script>
+
+<link href="album.css" rel="stylesheet">
+<link href="dist/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../font/css/all.css">
+<script src="../font/js/all.js"></script>
+
+<style>
+  .job-icon {
+  margin-top: -55px;
+  margin-left: -11px !important;
+}
+</style>
+
+  <script src="../font/jquery-2.2.0.min.js"></script>
+
+  
+  <link href="/assets/bootstrap-datepicker.css" rel="stylesheet"/>
+  <script src="/assets/bootstrap-datepicker.js"></script>
+
+  <!-- <link href="dist/css/styleall.css" rel="stylesheet"> -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+  <link rel="stylesheet" href="../font/bootstrap-icons.css">
+
+    <link href="album.css" rel="stylesheet">
+
+<style>
+html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+  
+  .maindiv{
+  border: 1px solid black;
+}</style>
+
+
+</head>
+<body >
+ 
+<main role="main" class="mb-100 ">
+  <section class="pl-4 pr-4">
+    <div class=" border-30 pt-3">
+
+      <div class="bg-white border-30 p-4  maindiv">
+          <div>
+           
+              <div class="name" style="text-transform:capitalize;";>Your Name Here</div>
+ <hr style="border-top: 3px solid rgba(0,0,0,.1);">
+                <div class="zipcodes"><i class="bi bi-building" style="margin-right: 5px;
+                  "></i><span class="postal"></span></div>
+                <div>    <i class="bi bi-geo-alt-fill" style="    margin-right: 5px;
+                  "></i><span class="address"></span>&nbsp;-&nbsp;<span class="gover"></span><span class="country"></span></div>
+                <div><i class="bi bi-phone-fill" style="    margin-right: 5px;
+                  "></i><span class="phone"></span></div>
+                <div class="telphones"><i class="bi bi-telephone-fill" style="    margin-right: 5px;
+                  "></i>
+                  <span class="tel"></span></div>
+               <div><i class="bi bi-envelope-fill" style="    margin-right: 5px;
+                "></i><span class="email"></span></div>
+             </div>
+          
+              <div style="margin:15px 0px" class="date" >Date</div>
+         
+          
+         
+              <div class="" style="margin-top:10px"><span class="dear"></span> <span class="hr" style="text-transform:capitalize"></span></div>
+
+              <!-- <div>
+                <span class="employeertype"></span><span class="employeername"></span>
+              </div> -->
+              <span class="employeerjob"></span><span class="employeerjobaddress"></span>
+              <p class="employeeraddress"></p>
+              <div class="" style="margin-top:10px">Dear <span class="dear"></span> <span class="hr" style="text-transform:capitalize"></span></div>
+
+              <div class="intro" style="margin-top: 20px;"></div>
+          
+              <div class="body" style="margin-top: 20px;"></div>
+         
+              <div class="closing" style="margin-top: 20px;"></div>
+
+              <div class="text-left" style="text-transform:capitalize; margin-top:10px">Sincerely,</div>
+              <div class="text-left name" style="text-transform: capitalize;margin-bottom: 10px;"></div>
+    
+
+
+
+
+      
+          </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+
+  function selectlangen() { changeLanguage();
+    localStorage.setItem("language","en");
+    window.Location.href="../en/apply-for-job.html"
+  
+  
+  } 
+  function selectlangar() { changeLanguage();
+      localStorage.setItem("language", "ar")
+  
+    }
+  </script>
+<script src="../ar/dist/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="../ar/dist/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="../ar/dist/js/bootstrap.js"></script>
+<script src="../ar/dist/js/bootstrap.bundle.min.js"></script>
+<script src="dist/slick/slick.js" type="text/javascript" charset="utf-8"></script> 
+<script type="text/javascript">
+    $(document).on('ready', function() {
+	$('#back-btn').on('click', function(e) {
+       window.history.go(-1);
+       return false;
+    })
+        $(".center").slick({
+        dots: true,
+		arrows: false,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		/*autoplay: true,
+		autoplaySpeed: 3000,*/
+      });
+		$(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+	});
+</script> 
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+$('.surveylink').click(function(){
+  Survey()
+});
+function Survey(){
+  SurveyDartSide.postMessage("survey");
+}
+$('.changeLanguage').click(function(){
+     changeLanguage();
+   });
+function changeLanguage(){
+	ChangeLangDartSide.postMessage("false");
+   }
+</script>
+<script>
+  var monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"];
+  window.onload=function(){
+
+    cvbuilder=readystate();
+let gender=["Sir/ Madam","Mr.","Ms.","Mr./Ms."];
+
+      console.log( monthNames[cvbuilder.coverletteren.submitdate.split("-")[1]-1]+"  -  "+cvbuilder.coverletteren.submitdate.split("-")[2]+"-"+cvbuilder.coverletteren.submitdate.split("-")[0]);
+document.getElementsByClassName("gover")[0].innerHTML=cvbuilder.coverletteren.personalinformation.governoratenamecoverletteren;
+    document.getElementsByClassName("country")[0].innerHTML="&nbsp;-&nbsp"+cvbuilder.coverletteren.personalinformation.countrynamecoverletteren;
+    document.getElementsByClassName("address")[0].innerHTML=cvbuilder.coverletteren.personalinformation.address.replaceAll("\n","<br>");;
+    document.getElementsByClassName("phone")[0].innerHTML=cvbuilder.coverletteren.personalinformation.mobile;
+    document.getElementsByClassName("tel")[0].innerHTML=cvbuilder.coverletteren.personalinformation.phone;
+
+    document.getElementsByClassName("email")[0].innerHTML=cvbuilder.coverletteren.personalinformation.email;
+    document.getElementsByClassName("date")[0].innerHTML= monthNames[cvbuilder.coverletteren.submitdate.split("-")[1]-1]+" "+cvbuilder.coverletteren.submitdate.split("-")[2]+","+cvbuilder.coverletteren.submitdate.split("-")[0]
+  
+    document.getElementsByClassName("postal")[0].innerHTML=cvbuilder.coverletteren.personalinformation.zipcode;
+    document.getElementsByClassName("name")[0].innerHTML=cvbuilder.coverletteren.personalinformation.fullname;
+    document.getElementsByClassName("name")[1].innerHTML=cvbuilder.coverletteren.personalinformation.fullname;
+
+    document.getElementsByClassName("intro")[0].innerHTML=cvbuilder.coverletteren.introductioninformation.introduction.replaceAll("\n","<br>");
+    document.getElementsByClassName("body")[0].innerHTML=cvbuilder.coverletteren.bodyinformation.xbody.replaceAll("\n","<br>");;
+    document.getElementsByClassName("closing")[0].innerHTML=cvbuilder.coverletteren.closinginformation.closing.replaceAll("\n","<br>");;
+    if(cvbuilder.coverletteren.employerinformation){
+    if(gender[parseInt(cvbuilder.coverletteren.employerinformation.em_gender)]){
+      if(cvbuilder.coverletteren.employerinformation.em_name!=""){
+        document.getElementsByClassName("dear")[0].innerHTML=gender[parseInt(cvbuilder.coverletteren.employerinformation.em_gender)];
+      }
+   
+      document.getElementsByClassName("dear")[1].innerHTML=gender[parseInt(cvbuilder.coverletteren.employerinformation.em_gender)];
+    }
+    else{
+      document.getElementsByClassName("dear")[1].innerHTML=gender[0]+"،";
+     
+
+
+ 
+    }
+    if(cvbuilder.coverletteren.employerinformation.em_name){
+      document.getElementsByClassName("hr")[0].innerHTML=cvbuilder.coverletteren.employerinformation.em_name+",";
+      document.getElementsByClassName("hr")[1].innerHTML=cvbuilder.coverletteren.employerinformation.em_name+",";
+
+    }
+  }
+ 
+    else{
+      document.getElementsByClassName("dear")[0].innerHTML=gender[0]+"،";
+     
+
+
+ 
+    }
+
+    if(cvbuilder.coverletteren.employerinformation){
+    if(cvbuilder.coverletteren.employerinformation.em_name){
+      document.getElementsByClassName("hr")[0].innerHTML=cvbuilder.coverletteren.employerinformation.em_name+",";
+    }
+ 
+    if(cvbuilder.coverletteren.employerinformation.em_jobtitle){
+      document.getElementsByClassName("employeerjob")[0].innerHTML=cvbuilder.coverletteren.employerinformation.em_jobtitle+",";
+    }
+    if(cvbuilder.coverletteren.employerinformation.em_coname){
+      document.getElementsByClassName("employeerjobaddress")[0].innerHTML=cvbuilder.coverletteren.employerinformation.em_coname;
+    }
+    if(cvbuilder.coverletteren.employerinformation.em_coaddress){
+      document.getElementsByClassName("employeeraddress")[0].innerHTML=cvbuilder.coverletteren.employerinformation.em_coaddress;
+    }
+  
+  }
+    if(!cvbuilder.coverletteren.employerinformation){
+ 
+      document.getElementsByClassName("hr")[0].innerHTML="";
+
+    }
+    if(cvbuilder.coverletteren.employerinformation){
+    if(!cvbuilder.coverletteren.employerinformation.em_name){
+      document.getElementsByClassName("hr")[0].innerHTML="";
+
+    }}
+   
+
+    if(cvbuilder.coverletteren.personalinformation.zipcode==""){
+    console.log("yyy")
+  document.getElementsByClassName("zipcodes")[0].style.display="none"
+}
+
+if(cvbuilder.coverletteren.personalinformation.phone==""){
+  document.getElementsByClassName("telphones")[0].style.display="none"
+}
+  }
+
+
+</script>
+
+<script>
+cvbuilder=readystate();
+  if (cvbuilder.coverletteren.personalinformation.fullname=== null) {
+     document.title= 'My Coverletter' ;
+   }else {
+     document.title=cvbuilder.coverletteren.personalinformation.fullname +"_coverletter";
+   }
+</script>
+</body>
+</html>

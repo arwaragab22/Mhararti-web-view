@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v4.1.1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+<title>Maharati</title>
+<link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+
+<!-- Bootstrap core CSS -->
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../en/dist/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="../en/dist/slick/slick-theme.css"/>
+<link href="../en/dist/css/styles.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<!-- <link href="" rel="stylesheet">    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<script src="../objectorianted.js"></script>
+<style>
+  body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+  .slick-slide div div > div{
+    min-height: 404px !important;
+  } 
+   
+  </style>
+
+<script src="dist/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="dist/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="dist/js/bootstrap.js"></script>
+<script src="dist/js/bootstrap.bundle.min.js"></script>
+<script src="../en/dist/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="https://unpkg.com/@popperjs/core@2" type="text/javascript" charset="utf-8"></script> -->
+<script src="../popper.min.js"></script>
+<style>
+    .slick-slide {
+ 
+ margin: 0px 5px 0px 5px;
+}
+footer div div {
+	padding: 0px !important;
+		}
+    footer .job-icon{
+    margin-left: 2px !important;
+  }
+</style>
+<script type="text/javascript">
+	$(document).on('ready', function() {$('#back-btn').on('click', function(e) {
+		window.history.go(-1);
+		return false;
+	})						
+		$(".center").slick({
+        dots: false,
+		arrows: false,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+			
+		/*autoplay: true,
+		autoplaySpeed: 3000,*/
+      });
+		if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+			var loadtrigger=localStorage.getItem('strigger');
+			if(loadtrigger){
+				$('.center').slick('slickGoTo', loadtrigger);
+			}
+		}
+										
+		var strigger;
+		$('.mainslides a').each(function(){
+			$(this).click(function(){
+				strigger=$(this).parents('.mainslides').attr('data-id');
+				localStorage.setItem('strigger',strigger);
+			});
+		})						
+        
+		$(".lazy").slick({
+        lazyLoad: 'ondemand', 
+        infinite: true
+      });
+	});
+</script>
+</head>
+<body>
+  <header class="fixed-top mb-5" style="direction: rtl">
+    <div class="navbar navbar-dark bg-primary">
+      <div class="container d-flex justify-content-between"> 
+            <a onclick="prevlink()" class="previous round text-white text-xl" style="direction: ltr;cursor: pointer;">❯</a>
+        <a href="home.html" class="navbar-brand d-flex align-items-center m-auto">
+          <img src="dist/images/logoAr.png" alt=""  height="30px;" /> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+         aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-menu" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        </button>
+      </div>
+    </div>
+    <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+       <div class="container p-1 text-center">
+        <div style="display:flex;margin:auto;justify-content: center;gap:18px; color:white">
+          <div><a style="cursor: pointer" href="../ar/rating.html">  <img src="../shared_dist/iconsmenu/Group.png"  width="20px" height="20px"/><p style="font-size: 11px;color: white;margin-top:4px">تقييمنا</p></a></div>
+          <div> <a class="surveylink" style="cursor: pointer" href=""><img src="../shared_dist/iconsmenu/Vector.png"  width="20px"  height="20px"/><p style="font-size: 11px;color: white;margin-top:4px">إستطلاع الرأى</p></a></div>
+       
+          <div><a style="cursor: pointer" onclick=" selectlangen()" href="../en/home.html"><img src="../shared_dist/iconsmenu/Usflag.svg"  width="30px" height="22px"/><p style="font-size: 11px;color: white;margin-top:4px">اللغة</p></a></div>
+        </div>
+        <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+          <div style="width: 40%;"><a href="my-cv.html" style="color: white;">   
+            <img src="../shared_dist/iconsmenu/Group746.svg" width="55px"/>
+            <div style="margin-top:7px;font-size: 14px;">  منشئ السيرة الذاتية </div></a>
+         
+          </div>
+          <div  style="width: 40%;">
+            <a href="../ar/why-cv.html" style="color: white;"> 
+            <img src="../shared_dist/iconsmenu/Group747.png"  width="55px"/>
+            <div style="margin-top:7px;font-size: 14px;">إرشادات كتابة السيرة الذاتية  </div>
+            </a>
+          </div>
+          </div>
+          <div  style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly; " > 
+            <div  style="width: 40%;" >
+              <a href="../ar/vr.html" style="color: white;"> 
+            <img src="../shared_dist/iconsmenu/Group749.png"  width="55px"/>
+            <div style="margin-top:7px ;font-size: 14px;">المقابلة</div>
+            </a>
+          </div>
+          <div   style="width: 40%;">
+            <a href="../ar/skills.html" style="color: white;"> 
+            <img src="../shared_dist/iconsmenu/Group748.png"  width="55px"/>
+            <div style="margin-top:7px;font-size: 14px;">تقييم المهارات</div>
+            </a>
+          </div>
+         
+        </div>
+        <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+          <div   style="width: 40%;">
+            <a href="../ar/marketing-myself.html" style="color: white;"> 
+            <img src="../shared_dist/iconsmenu/Group752.svg"  width="55px"/>
+            <div style="margin-top:7px;font-size: 14px;">تسويق نفسي</div>
+            </a>
+          </div>
+          <div   style="width: 40%;">  <a href="../ar/practice-interview.html" style="color: white;"> 
+            <img src="../shared_dist/iconsmenu/Group753.svg"  width="55px"/>
+            <div style="margin-top:7px;font-size: 14px;">ممارسة المقابلة</div>
+          </a>
+          </div>
+          </div>
+          <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:px ;justify-content: space-evenly;">
+            <div  style="width: 40%;">
+              <a href="../ar/apply-for-job.html" style="color: white;" > 
+              <img src="../shared_dist/iconsmenu/Group750.svg"  width="55px"/>
+              <div style="margin-top:7px;font-size: 14px;">وظائف شاغرة</div>
+              </a>
+            </div>
+            <div  style="width: 40%;">
+              <a href="../ar/job.html" style="color: white;"> 
+              <img src="../shared_dist/iconsmenu/Group751.svg"  width="55px"/>
+              <div style="margin-top:7px;font-size: 14px;">تحليل إعلان وظيفة</div>
+              </a>
+            </div>
+            </div>
+   
+            
+        </div> 
+      </div>
+    </div>
+    <img src="../shared_dist/images/menu-shad.svg" alt="" width="100%" />
+  </header>
+<main role="main" class="mb-100 mt-100">
+  <section class="center slider">
+    <div data-id="0" class="mainslides">
+      <div class="text-center bg-primary bg-circle border-20 box-shad p-4 mr-1 ml-1">
+        <h3 class="text-white text-uppercase font-weight-bold">إرشادات كتابة السيرة الذاتية  <br/>
+          </h3>
+        <p class="text-white font-weight-bold">ما الذي يجب أن تحتويه سيرتك الذاتية؟</p>
+        <img src="../shared_dist/images/CV-Tips-icon.svg" alt="" width="70%" class="m-auto p-2" /> <a 
+        style="margin-bottom:10px;display:inline-block" href="practice-cv.html" class="btn btn-primary border-20 bg-red text-uppercase font-weight-bold ">التطبيق العملي </a> </div>
+      <a href="why-cv.html" style="    direction: rtl;">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img  src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline;margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>ما هي السيرة الذاتية؟ <span class="float-right pt-1">❯</span> </div>
+      </a>
+      <a href="cv-components.html" style="    direction: rtl;">
+        <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> 
+          <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>عناصر السيرة الذاتية <span class="float-right pt-1">❯</span> </div>
+        </a>
+        <a href="comprehensive-cv.html" style="    direction: rtl;">
+          <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>السيرة الذاتية الشاملة<span class="float-right pt-1">❯</span> </div>
+          </a> <a href="types-of-cv.html" style="    direction: rtl;">
+          <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>أنواع السير الذاتية <span class="float-right pt-1">❯</span> </div>
+          </a></div>
+          
+    <div data-id="1" class="mainslides"  style="    direction: rtl;">
+      <div class="text-center bg-baby-blue  bg-circle  border-20 box-shad-dark p-4 mr-1 ml-1">
+        <h3 class="text-primary-deep text-uppercase font-weight-bold">    منشىء السيرة الذاتية والخطاب التقديمي <br/></h3>
+        <p class="text-primary-deep font-weight-bold">جهز سيرتك الذاتية المهنية   <br/>
+          والخطاب التقديمي وحمّلهما </p>
+        <img src="../shared_dist/images/CV-Builder-icon.svg" alt="" width="70%" class="m-auto p-2" /> <a href="how-to.html" class="btn btn-primary border-20 bg-red text-uppercase font-weight-bold ">شغل الفيديو</a> </div>
+      <a href="my-cv.html" style="    direction: rtl;" >
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px;  "  /></span>  <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> سيرتي الذاتية(النسخة العربية)<span class="float-right pt-1">❯</span> </div>
+      </a> <a  class="downloadcv_link"   >
+      <div style="background-color: #babfc2" class="box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px;" /></span> </span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> تحميل سيرتي الذاتية<span class="float-right pt-1">❯</span> </div>
+      </a> <a href="cover-letter.html"  style="    direction: rtl;"  >
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline;margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> الخطاب التقديمى<span class="float-right pt-1"> ❯</span></div>
+      </a> </div>
+    <div data-id="2" class="mainslides">
+      <div class="text-center bg-success bg-circle border-20 box-shad-green p-4 mr-1 ml-1">
+        <h3 class="text-white text-uppercase font-weight-bold">تقييم <br/> المهارات</h3>
+        <p class="text-white font-weight-bold">كيف تقَيِّم نفسك
+			<br/>
+			تحدد مهاراتك </p>
+     
+        <img src="../shared_dist/images/Skills-icon.svg" alt="" width="70%" class="m-auto p-2" /> <a style="margin-bottom: 10px;
+        display: inline-block;
+    " href="skills-7.html" class="btn btn-primary border-20 bg-red text-uppercase font-weight-bold ">التطبيق العملى</a>
+  
+    <br> </div>
+      <a href="skills.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>من أنا؟ <span class="float-right pt-1">❯</span>  </div>
+      </a>
+       <a href="skills-2.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>أنواع الشخصيات <span class="float-right pt-1">❯</span> </div>
+      </a> <a href="skills-3.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> ما الذي أحبه؟ <span class="float-right pt-1">❯</span> </div>
+      </a> <a href="what-skills.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline;  margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>ما هي المهارة؟ <span class="float-right pt-1">❯</span> </div>
+      </a> <a href="skills-4.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline ;margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> مهاراتي <span class="float-right pt-1">❯</span> </div>
+      </a> <a href="skills-5.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline ;margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>أنواع المهارات <span class="float-right pt-1">❯</span> </div>
+      </a> <a href="skills-6.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline;  margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>كيف يمكنني التطور؟ <span class="float-right pt-1">❯</span> </div>
+      </a> </div>
+    <div data-id="3" class="mainslides">
+      <div class="text-center bg-blue bg-circle border-20 box-shad-blue p-4 mr-1 ml-1">
+        <h3 class="text-white text-uppercase font-weight-bold"> المقابلة </h3>
+        <p class="text-white font-weight-bold"><br/>  المقابلة في الواقع
+			<br/>
+			الافتراضي </p>
+      <br>
+        <img src="../shared_dist/images/interview-icon.svg" alt="" width="70%" class="m-auto p-2" /> <a href="vr.html" class="btn btn-primary border-20 bg-red text-uppercase font-weight-bold ">التطبيق العملي </a> 
+      <br></div>
+      <!--<a href="vr.html">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> Launch VR Interview <span class="float-right pt-1">❯</span> </div>
+      </a>--> </div>
+    <div data-id="4" class="mainslides">
+      <div class="text-center bg-orange bg-circle border-20 box-shad-orange p-4 mr-1 ml-1">
+        <h3 class="text-white text-uppercase font-weight-bold">ممارسة<br/>المقابلة</h3>
+        <p class="text-white font-weight-bold">شاهد فيديو كيفية الاستعداد للمقابلات</p>
+        <img src="../shared_dist/images/Practice-icon.svg" alt="" width="70%" class="m-auto p-2" /> <a 
+        style="margin-bottom: 10px;
+        display: inline-block;
+    "href="practice-interview.html" class="btn btn-primary border-20 bg-red text-uppercase font-weight-bold ">التطبيق العملى</a> </div>
+      <a href="practice-interview.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted "> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px;  " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span>  فيديوهات وإرشادات  <span class="float-right pt-1">❯</span> </div>
+      </a> </div>
+    <div data-id="5" class="mainslides">
+      <div class="text-center bg-info bg-circle border-20 box-shad-info p-4 mr-1 ml-1">
+        <h3 class="text-white text-uppercase font-weight-bold">	تسويق<br/>نفسي</h3>
+        <p class="text-white font-weight-bold">كيف  <br/>
+          تسوق لنفسك؟ </p>
+        <img src="../shared_dist/images/market-icon.svg" alt="" width="70%" class="m-auto p-2" /> <a  style="margin-bottom: 10px;
+        display: inline-block;"
+    href="marketing-myself.html" class="btn btn-primary border-20 bg-red text-uppercase font-weight-bold "> التطبيق العملى</a> </div>
+      <a href="marketing-myself.html" style="direction: rtl" >
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted text-sm"> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; " /></span><span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline;margin-right: -21px;" class="bg-gray border-20 p-1" /></span> تقييم صفاتك الشخصية <span class="float-right pt-1">❯</span> </div>
+      </a> </div>
+    <div data-id="6" class="mainslides">
+      <div class="text-center bg-melon bg-circle border-20 box-shad-dark p-4 mr-1 ml-1" style="text-align:center">
+        <h3 class="text-white text-uppercase font-weight-bold"> تحليل إعلان وظيفة  </h3>
+        <p class="text-white font-weight-bold " style="margin-bottom: 30px;">كيفية تحليل إعلان وظيفة ومدى مناسبته لك </p>
+        <img src="../shared_dist/images/job.svg" alt="" width="70%" class="m-auto p-2" /> <br/>
+        <br/>
+        <!--<a href="marketing-myself.html" class="btn btn-primary border-20 bg-red text-uppercase font-weight-bold ">PRACTICE</a>--> </div>
+      <a href="job.html" style="direction: rtl">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted text-sm"> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> ما تحتاج إن تفعله؟ <span class="float-right pt-1">❯</span></div>
+      </a> <a href="job-2.html"  style="direction: rtl" >
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted text-sm"> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> عوامل التقييم <span class="float-right pt-1">❯</span>  </div>
+      </a> </div>
+    <div data-id="7" class="mainslides">
+      <div class=
+      "bg-circle bg-embl border-20 box-shad-dark p-4 mr-1 ml-1" style="text-align: center;">
+        <h3 class=" text-uppercase font-weight-bold" style=" font-size: 23px;color: white; " >	 
+          وظائف شاغرة  </h3>
+        <p class=" font-weight-bold ;" style="color: white; margin-bottom: 30px;"  >
+          تصفح الوظائف الشاغرة المتاحة وتقدم للوظيفة المناسبة لاحتياجاتك ومؤهلاتك</p>
+        <img src="../shared_dist/images/Apply-job-icon.svg" alt="" width="70%" class="m-auto p-2" /> <br/>
+        <br/>
+      </div>
+      <a href="apply-for-job.html" class="surveylink">
+      <div class="bg-white box-shad-2 mt-3 mb-2 border-15 pr-3 pl-3 pt-2 pb-2 text-muted " style="    direction: rtl;"> <span><img src="../shared_dist/images/left-icon.svg" alt="" width="8px" style="display: inline; ; margin-right: -21px; " /></span> <span class="mr-1 ml-1"><img src="../shared_dist/images/light-icon.svg" alt="" width="25px" style="display: inline" class="bg-gray border-20 p-1" /></span> تقديم للوظيفة  <span class="float-right pt-1">❯</span> </div>
+      </a> </div>
+  </section>
+</main>
+<footer class="text-muted fixed-bottom pt-3 pb-3 bg-footer" style="direction: rtl;">
+  <div class="row d-flex justify-content-around" >
+    <div class="col-2 pl-0 "  style="text-align: left;"><a href="home.html" class="d-block">
+      <img src="../shared_dist/images/Asset1.png" alt=""
+      width="40px"   height="40px" /></a></div>
+    <div class="col-2 pr-0 text-right"><a href="ar_instructions.html" class="d-block"><img
+          src="../shared_dist/images/icon-three.png" alt="" width="40px"   height="40px"/></a></div>
+
+    <div class="col-2 job-icon" style="margin-top: -53px;
+    margin-left: 23px;"><a href="apply-for-job.html" class="d-block surveylink">
+        <img src="../shared_dist/images/job-icon.svg" alt="" width="70px" class="rounded-circle shadow" /></a></div>
+    <div class="col-2 pl-0 text-left"><a href="my-cv.html" class="d-block"><img src="../shared_dist/images/icon-two.png"
+          alt="" width="40px"   height="40px"/></a></div>
+
+    <div class="col-2 pr-0 "  style="text-align: right;"><a href="vr.html" class="d-block"><img src="../shared_dist/images/icon-four.png" alt=""
+          width="48px" height="40px" /></a></div>
+  </div>
+</footer>
+
+	
+<script>
+	
+	
+	
+	
+	
+</script>
+	
+<script>
+
+	function myFunction(x) {
+		x.classList.toggle("change");
+		}
+	$('.surveylink').click(function(){
+		Survey();
+	});
+	function Survey(){
+		SurveyDartSide.postMessage("survey");
+	}
+	
+	$(document).ready(function(){
+    if(JSON.parse(localStorage.getItem("cvbuilder"))){
+      if(JSON.parse(localStorage.getItem("cvbuilder")).cvar.cvtype){
+        if(JSON.parse(localStorage.getItem("cvbuilder")).cvar.cvtype=="السيرة الذاتية الوظيفية"){
+          cvbuilder = readystate();
+        if (cvbuilder.cvar.personalinformation) {
+          if (cvbuilder.cvar.personalinformation.personalinformationflag == 1) {
+            console.log("personal done ");
+            if (cvbuilder.cvar.jobobjectivear) {
+              if (cvbuilder.cvar.jobobjectivear.jobobjectiveflag == 1) {
+
+
+                console.log("obj is done");
+
+
+                let countexpstorage = 0;
+
+                if (true) {
+                  let expps = cvbuilder.cvar.experience_data;
+                  // for (let i = 0; i < expps.length; i++) {
+                  //   if (expps[i]) {
+
+
+                    if (cvbuilder.cvar.educationex_data ){
+                  if (cvbuilder.cvar.educationex_data.length > 0) {
+                    let edustorage = cvbuilder.cvar.educationex_data;
+                    let countedustorage = 0;
+                    for (let i = 0; i < edustorage.length; i++) {
+                      console.log(edustorage);
+                      if (edustorage[i]) {
+                        if (edustorage[i].eduxitem.length > 0) {
+                          countedustorage++;
+                        }
+                      }
+                    }
+                    if (+countedustorage > 0) {
+                      console.log("edu is done ");
+                      if (cvbuilder.cvar.references) {
+
+                        if (cvbuilder.cvar.references) {
+                          console.log("ref is done");
+
+                          if (cvbuilder.cvar.references.refrequest == 0) {
+                            if (true) {
+                              if (true) {
+                                console.log("all ver is done ");
+                                if (cvbuilder.cvar.skills){
+                                if (cvbuilder.cvar.skills.length > 0) {
+                                  let skillsstorage = cvbuilder.cvar.skills;
+                                  let countskilss = 0;
+                                  for (let i = 0; i < 11; i++) {
+                                    if (skillsstorage[i]) {
+                                      if (skillsstorage[i].length > 0) {
+                                        console.log("skills done");
+                                        countskilss++;
+                                        console.log(countskilss)
+                                      }
+
+                                    }
+                                  }
+                                  if (countskilss > 0) {
+
+  
+     
+                                    document.getElementsByClassName("downloadcv_link")[0].setAttribute('href', 'selectpdffile.html');
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.cursor="pointer";
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.backgroundColor="white"
+  
+
+
+                                  }
+
+                                }
+                              }
+                              }
+
+
+                            }
+                          }
+                          if (cvbuilder.cvar.references.refrequest == 1) {
+                            console.log("1");
+                            let locref = cvbuilder.cvar.references.references_data;
+if(locref){
+                            if (locref.length > 0) {
+
+                              for (let i = 0; i < locref.length; i++) {
+                                if (locref[i]) {
+                                  console.log(locref[i]);
+                                  console.log("hhfhhhhh");
+                                  if (locref[i].refitem.length > 2) {
+                                    console.log("hhfhhhhh");
+                                    if (true) {
+                                      if (true) {
+                                        //                                           for(let i=0;i< cvbuilder.cvar.experience_data.length;i++){
+                                        // if(cvbuilder.cvar.experience_data[i].expitem.length>0){
+
+                                        console.log("all ver is done ");
+                                        if (cvbuilder.cvar.skills) {
+                                          if (cvbuilder.cvar.skills.length > 0) {
+                                            let skillsstorage = cvbuilder.cvar.skills;
+                                            let countskilss = 0;
+                                            for (let i = 0; i < 11; i++) {
+                                              if (skillsstorage[i]) {
+                                                if (skillsstorage[i].length > 0) {
+                                                  console.log("skills done");
+                                                  countskilss++;
+                                                  console.log(countskilss)
+                                                }
+
+                                              }
+                                            }
+                                            if (countskilss > 0) {
+                                         
+
+     
+                                              document.getElementsByClassName("downloadcv_link")[0].setAttribute('href', 'selectpdffile.html');
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.cursor="pointer";
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.backgroundColor="white"
+  
+
+                                            }
+
+                                          }
+
+                                        }
+
+
+                                      }
+                                    }
+                                  }
+
+                                }
+
+                                // localStorage.getItem("refrequest").length===4&& 
+                              }
+                            }}
+                          }
+
+
+                        }
+
+
+                      }
+                    }
+                    else {
+                      countexpstorage++;
+                    }
+                    if (true) {
+                      console.log("not complete data ")
+                    }
+
+
+
+                  }}
+                }
+              }
+
+
+            }
+          }
+        }
+        }
+        if(JSON.parse(localStorage.getItem("cvbuilder")).cvar.cvtype=="السيرة الذاتية المرتبة زمنياً"){
+          cvbuilder = readystate();
+        if (cvbuilder.cvar.personalinformation) {
+       
+          if (cvbuilder.cvar.personalinformation.personalinformationflag == 1) {
+            console.log("personal done ");
+            if (cvbuilder.cvar.jobobjectivear) {
+              if (cvbuilder.cvar.jobobjectivear.jobobjectiveflag == 1) {
+
+
+                console.log("obj is done");
+
+
+                let countexpstorage = 0;
+
+                if (cvbuilder.cvar.experience_data) {
+                  let expps = cvbuilder.cvar.experience_data;
+                  for (let i = 0; i < expps.length; i++) {
+                    if (expps[i]) {
+
+                      if (cvbuilder.cvar.educationex_data ){
+
+                      if (cvbuilder.cvar.educationex_data.length > 0) {
+                        let edustorage = cvbuilder.cvar.educationex_data;
+                        let countedustorage = 0;
+                        for (let i = 0; i < edustorage.length; i++) {
+                          console.log(edustorage);
+                          if (edustorage[i]) {
+                            if (edustorage[i].eduxitem.length > 0) {
+                              countedustorage++;
+                            }
+                          }
+                        }
+                        if (+countedustorage > 0) {
+                          console.log("edu is done ");
+                          if (cvbuilder.cvar.references) {
+
+                            if (cvbuilder.cvar.references) {
+                           cvbuilder=readystate();
+
+                              if (cvbuilder.cvar.references.refrequest == 0) {
+                                if (cvbuilder.cvar.experience_data) {
+                                  if (cvbuilder.cvar.experience_data.length > 0) {
+                                    console.log("all ver is done ");
+                                    if (true) {
+
+                                      if (true) {
+
+                                    
+                                        document.getElementsByClassName("downloadcv_link")[0].setAttribute('href', 'selectpdffile.html');
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.cursor="pointer";
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.backgroundColor="white"
+  
+
+
+                                      }
+
+                                    }
+
+                                  }
+                                }
+                              }
+
+
+                              if (cvbuilder.cvar.references.refrequest == 1) {
+                            
+                        
+                                let locref = cvbuilder.cvar.references.references_data;
+if(locref){
+                                if (locref.length > 0) {
+
+                                  for (let i = 0; i < locref.length; i++) {
+                                    if (locref[i]) {
+                                      console.log(locref[i]);
+                                      console.log("hhfhhhhh");
+                                      if (locref[i].refitem.length > 2) {
+                                        console.log("hhfhhhhh");
+                                        if (cvbuilder.cvar.experience_data) {
+                                          if (cvbuilder.cvar.experience_data.length > 0) {
+                                            for (let i = 0; i < cvbuilder.cvar.experience_data.length; i++) {
+                                              if (cvbuilder.cvar.experience_data[i].expitem.length > 0) {
+
+                                                console.log("all ver is done ");
+                                                if (true) {
+                                             
+                               
+                                                    if (true) {
+
+                                                
+                                                      document.getElementsByClassName("downloadcv_link")[0].setAttribute('href', 'selectpdffile.html');
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.cursor="pointer";
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.backgroundColor="white"
+                                                 
+                                                 
+
+                                                    }
+
+                                                  
+
+                                                }
+
+
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+
+                                    }
+
+                                    // localStorage.getItem("refrequest").length===4&& 
+                                  }
+                                }
+                              }
+                            }
+                            }
+                          }
+
+                        }
+                      }}
+                    }
+                    else {
+                      countexpstorage++;
+                    }
+                    if (countexpstorage == expps.length) {
+                      console.log("not complete data ")
+                    }
+
+
+
+                  }
+                }
+              }
+
+
+            }
+          }
+        } 
+        cvbuilder = readystate();
+        }
+        if(JSON.parse(localStorage.getItem("cvbuilder")).cvar.cvtype=="السيرة الذاتية المختلطة"){
+          cvbuilder = readystate();
+        if (cvbuilder.cvar.personalinformation) {
+          if (cvbuilder.cvar.personalinformation.personalinformationflag == 1) {
+            console.log("personal done ");
+            if (cvbuilder.cvar.jobobjectivear) {
+              if (cvbuilder.cvar.jobobjectivear.jobobjectiveflag == 1) {
+
+
+                console.log("obj is done");
+
+
+                let countexpstorage = 0;
+
+                if (cvbuilder.cvar.experience_data) {
+                  let expps = cvbuilder.cvar.experience_data;
+                  for (let i = 0; i < expps.length; i++) {
+                    if (expps[i]) {
+
+
+                      if (cvbuilder.cvar.educationex_data) {
+                        if (cvbuilder.cvar.educationex_data.length > 0) {
+                          let edustorage = cvbuilder.cvar.educationex_data;
+                          let countedustorage = 0;
+                          for (let i = 0; i < edustorage.length; i++) {
+                            console.log(edustorage);
+                            if (edustorage[i]) {
+                              if (edustorage[i].eduxitem.length > 0) {
+                                countedustorage++;
+                              }
+                            }
+                          }
+                          if (+countedustorage > 0) {
+                            console.log("edu is done ");
+                            if (cvbuilder.cvar.references) {
+
+                              if (cvbuilder.cvar.references) {
+                                console.log("ref is done");
+
+                                if (cvbuilder.cvar.references.refrequest == 0) {
+                                  if (cvbuilder.cvar.experience_data) {
+                                    if (cvbuilder.cvar.experience_data.length > 0) {
+                                      console.log("all ver is done ");
+                                      if (cvbuilder.cvar.skills){
+                                      if (cvbuilder.cvar.skills.length > 0) {
+                                        let skillsstorage = cvbuilder.cvar.skills;
+                                        let countskilss = 0;
+                                        for (let i = 0; i < 11; i++) {
+                                          if (skillsstorage[i]) {
+                                            if (skillsstorage[i].length > 0) {
+                                              console.log("skills done");
+                                              countskilss++;
+                                              console.log(countskilss)
+                                            }
+
+                                          }
+                                        }
+                                        if (countskilss > 0) {
+
+                                     
+
+     
+                                          document.getElementsByClassName("downloadcv_link")[0].setAttribute('href', 'selectpdffile.html');
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.cursor="pointer";
+                                          document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.backgroundColor="white"
+  
+
+                                        }
+
+                                      }}
+
+                                    }
+                                  }
+                                }
+
+
+                                if (cvbuilder.cvar.references.refrequest == 1) {
+                                  console.log("1");
+                                  let locref = cvbuilder.cvar.references.references_data;
+if(locref){
+                                  if (locref.length > 0) {
+
+                                    for (let i = 0; i < locref.length; i++) {
+                                      if (locref[i]) {
+                                        console.log(locref[i]);
+                                        console.log("hhfhhhhh");
+                                        if (locref[i].refitem.length > 2) {
+                                          console.log("hhfhhhhh");
+                                          if (cvbuilder.cvar.experience_data) {
+                                            if (cvbuilder.cvar.experience_data.length > 0) {
+                                              for (let i = 0; i < cvbuilder.cvar.experience_data.length; i++) {
+                                                if (cvbuilder.cvar.experience_data[i].expitem.length > 0) {
+
+                                                  console.log("all ver is done ");
+                                                  if (cvbuilder.cvar.skills) {
+                                                    if (cvbuilder.cvar.skills.length > 0) {
+                                                      let skillsstorage = cvbuilder.cvar.skills;
+                                                      let countskilss = 0;
+                                                      for (let i = 0; i < 11; i++) {
+                                                        if (skillsstorage[i]) {
+                                                          if (skillsstorage[i].length > 0) {
+                                                            console.log("skills done");
+                                                            countskilss++;
+                                                            console.log(countskilss)
+                                                          }
+
+                                                        }
+                                                      }
+                                                      if (countskilss > 0) {
+                                                        document.getElementsByClassName("downloadcv_link")[0].setAttribute('href', 'selectpdffile.html');
+                                                        document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.cursor="pointer";
+                                                        document.getElementsByClassName("downloadcv_link")[0].firstElementChild.style.backgroundColor="white"
+                                                            
+                                                                         
+                                                                      
+
+                                                      }
+
+                                                    }
+
+                                                  }
+
+
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+
+                                      }
+
+                                      // localStorage.getItem("refrequest").length===4&& 
+                                    }
+                                  }
+                                }
+                              }
+                              }
+                            }
+
+                          }
+                        }
+                      }
+                    }
+                    else {
+                      countexpstorage++;
+                    }
+                    if (countexpstorage == expps.length) {
+                      console.log("not complete data ")
+                    }
+
+
+
+                  }
+                }
+              }
+
+
+            }
+          }
+        }
+        }
+      }
+
+    }
+		// var checkfilledcv=localStorage.getItem('filledcv');
+	var mycvtype=localStorage.getItem('cvtype');
+
+   
+		if(mycvtype ){
+		
+ 
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+  var chooseClick = function(){
+		var fullname= localStorage.getItem('fullname');
+		var address=localStorage.getItem('address');
+		var countryname=localStorage.getItem('countryname');
+		var governoratename=localStorage.getItem('governoratename');
+		var mobile=localStorage.getItem('mobile');
+		var phone=localStorage.getItem('phone');
+		CVDownLoadOnDevice.postMessage(fullname +',' +address +',' +countryname +',' + governoratename +',' + mobile +',' + phone );
+	}
+}})
+	$('.changeLanguage').click(function(){
+     changeLanguage();
+   });
+   function changeLanguage(){
+	ChangeLangDartSide.postMessage("true");
+   }
+</script>
+<script>
+
+  function selectlangen(){changeLanguage();
+    localStorage.setItem("language", "en");
+    window.Location.href = "../en/apply-for-job.html"
+
+
+  }
+  function selectlangar(){changeLanguage();
+    localStorage.setItem("language", "ar")
+
+  }
+</script>
+<script src="../ar/back.js"></script>
+</body>
+</html>

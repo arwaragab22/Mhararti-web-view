@@ -1,0 +1,480 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <title>Maharati</title>
+    <link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/bootstrap-slider.css"/>
+    <link href="dist/css/styles.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <style>
+        .job-icon {
+        margin-top: -55px;
+        margin-left: -11px !important;
+    }
+    </style>
+</head>
+<body>
+    <header class="fixed-top mb-5">
+        <div class="navbar navbar-dark bg-primary">
+            <div class="container d-flex justify-content-between">
+                <a  onclick="prevlink()" class="previous round text-white text-xl" >❮</a> 
+                <a href="home.html" class="navbar-brand d-flex align-items-center m-auto"> <img src="../shared_dist/images/logo.svg" alt="" height="30px;" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="container-menu" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+      <div class="container pb-1 text-center">
+        <p class="text-white text-12">Please choose your language</p>
+        <a  onclick="selectlangen()" type="button" class="btn btn-light bg-transparent-50 text-white text-shadow pr-4 pl-4 mr-2"> <span><img src="dist/images/en.svg" alt="" width="30px"/></span> English</a>
+        <a onclick="selectlangar()" type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 ml-2 changeLanguage" href="../ar/apply-for-job.html"> العربية <span><img src="../shared_dist/images/ar.svg" alt="" width="30px"/></span> </a> </div>
+      <div class="container pt-1 pb-2 text-center pr-5 pl-5"> <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block" href="rating.html"> <span><img src="dist/images/rate.svg" alt="" width="30px"/></span> Rate Maharati App</a> </div>
+      <div class="container text-center pr-5 pl-5"> <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block surveylink" href="#"> <span><img src="dist/images/survey.svg" alt="" width="30px"/></span> Survey</a> </div>
+    </div> -->
+        <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+            <div class="container p-1 text-center">
+                <div style="display:flex;margin:auto;justify-content: center;gap:18px; color:white">
+
+                    <div><a style="cursor: pointer" href="rating.html">  <img src="../shared_dist/iconsmenu/Group.png" width="20px" height="20px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;">Rate us</p></a></div>
+
+
+                    <div> <a class="surveylink" style="cursor: pointer" href=""><img src="../shared_dist/iconsmenu/Vector.png" width="20px" height="20px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;"> Survey</p></a></div>
+                    <div>
+                        <a style="cursor: pointer" onclick=" selectlangar()" href="../ar/rating.html"><img src="../shared_dist/images/ar.svg" width="30px" height="22px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;">Language</p></a>
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="why-cv.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group747.png" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">CV Tips</div>
+                        </a>
+                    </div>
+                    <div style="width: 40%;">
+                        <a href="my-cv.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group746.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">  CV Builder</div>
+                        </a>
+
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly; ">
+
+                    <div style="width: 40%;">
+                        <a href="skills.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group748.png" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">Skills Assessment</div>
+                        </a>
+                    </div>   <div style="width: 40%;">
+                        <a href="vr.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group749.png" width="55px" />
+                            <div style="margin-top:7px ;font-size: 14px;font-weight: bold;">The Interview</div>
+                        </a>
+                    </div>
+
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="practice-interview.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group753.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Practice Interview</div>
+                        </a>
+                    </div>   <div style="width: 40%;">
+                        <a href="marketing-myself.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group752.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Marketing Myself</div>
+                        </a>
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="job.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group751.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">  Job Announcement</div>
+                        </a>
+                    </div>  <div style="width: 40%;">
+                        <a href="apply-for-job.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group750.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Apply for a job</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- <p class="text-white text-12">يرجى اختيار لغتك</p>
+              <a   onclick="selectlangen()"  href="../en/apply-for-job.html" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4  mr-2 changeLanguage" > <span><img src="dist/images/en.svg" alt="" width="30px"/></span> English</a>
+              <a  onclick="selectlangar()"type="button" class="btn btn-light bg-transparent-50 text-white text-shadow pr-4 pl-4 ml-2"> <span><img src="../shared_dist/images/ar.svg" alt="" width="30px"/></span> العربية </a>
+            </div>
+              <div class="container pt-1 pb-2 text-center pr-5 pl-5">
+                <a type="button"class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block"href="rating.html"><span><img src="dist/images/rate.svg" alt="" width="30px" style="    margin-left: 8px;"/></span>قيم تطبيق مهاراتي</a>
+              </div>
+              <div class="container text-center pr-5 pl-5">
+                <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block surveylink" href="#"><span><img src="dist/images/survey.svg" alt="" width="30px"  style="    margin-left: 8px;"/></span>إستطلاع الرأى</a>  -->
+            </div>
+        </div>
+        <img src="../shared_dist/images/menu-shad.svg" alt="" width="100%" />
+    </header>
+    <main role="main" class="mb-100 mt-100">
+        <section class="pl-4 pr-4">
+            <div class="bg-primary border-30 pt-3 text-center">
+                <h2 class="text-white font-weight-bold">Rating Maharati</h2>
+                <div class="bg-white border-30 p-4 box-shad-2">
+                    <p>Please tell us about your overall app experience by indicating how much you agree with each of the following statments:</p>
+                    <p>I am able to easily navigate and access information within the Maharati App</p>
+                    <p>
+                        <input id="Qu1" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu1CurrentSliderValLabel">Rate: <span id="Qu1SliderVal" class="text-primary-deep font-weight-bold">Neutral</span></div>
+                    </p>
+                    <p>Overall, I found the Maharati App useful while seeking a job</p>
+                    <p>
+                        <input id="Qu2" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu2CurrentSliderValLabel">Rate: <span id="Qu2SliderVal" class="text-primary-deep font-weight-bold">Neutral</span></div>
+                    </p>
+                    <p>Overall, I am satisfied with the services I received through the Maharati App</p>
+                    <p>
+                        <input id="Qu3" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu3CurrentSliderValLabel">Rate: <span id="Qu3SliderVal" class="text-primary-deep font-weight-bold">Neutral</span></div>
+                    </p>
+                    <p>I will recommend the Maharati App to my friends or family</p>
+                    <p>
+                        <div class="form-check form-check-inline">
+                            <input name="question5" class="form-check-input" value="6" id="checkyes" type="radio" checked>
+                            <label class="form-check-label" for="checkyes"> Yes </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input name="question5" class="form-check-input" value="7" id="checkno" type="radio">
+                            <label class="form-check-label" for="checkno"> No </label>
+                        </div>
+                    </p>
+                    <p>The Maharati App has helped me to get a job / internship</p>
+                    <p>
+                        <input id="Qu4" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu4CurrentSliderValLabel">Rate: <span id="Qu4SliderVal" class="text-primary-deep font-weight-bold">Neutral</span></div>
+                    </p>
+
+
+                    <p><a href="home.html" class="btn border-10 bg-primary font-weight-bold box-shad-2 text-white pr-4 pl-4 thankyou-btn">Thank You </a></p>
+                    <p id="share" class="valid-feedback"><a href="#" class="btn border-10 bg-primary font-weight-bold box-shad-2 text-white pr-4 pl-4"> <i class="bi bi-box-arrow-up-right align-text-bottom"></i> Share Maharati</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-muted fixed-bottom pt-3 pb-3 bg-footer">
+        <div class="row d-flex justify-content-around" style="padding:0px 30px;">
+          <div class="col-2 pl-0 text-left"><a href="home.html" class="d-block"><img src="../shared_dist/images/icon-one.png" alt="" width="40px" height="40px" /></a></div>
+          <div class="col-2 pl-0 text-left"><a href="my-cv.html" class="d-block"><img src="../shared_dist/images/icon-two.png" alt="" width="40px" height="40px"/></a></div>
+          <div class="col-2 job-icon" style=""><a href="apply-for-job.html" class="d-block"><img src="../shared_dist/images/job-icon.svg" alt="" width="70px" class="rounded-circle shadow" /></a></div>
+          <div class="col-2 pr-0 text-right"><a href="ar_instructions.html" class="d-block"><img src="../shared_dist/images/icon-three.png" alt="" width="40px" height="40px"/></a></div>
+          <div class="col-2 pr-0 text-right"><a href="vr.html" class="d-block"><img src="../shared_dist/images/icon-four.png" alt="" width="48px" height="40px"/></a></div>
+        </div>
+    </footer>
+
+    <script src="../ar/dist/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="../ar/dist/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="../ar/dist/js/bootstrap.js"></script>
+    <script src="../ar/dist/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="dist/slick/slick.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="dist/bootstrap-slider.js" type="text/javascript" charset="utf-8"></script><script>
+
+        function selectlangen() { changeLanguage();
+          localStorage.setItem("language","en");
+          window.Location.href="../en/apply-for-job.html"
+        
+        
+        } 
+        function selectlangar() { changeLanguage();
+            localStorage.setItem("language", "ar")
+        
+          }
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#back-btn').on('click', function (e) {
+                window.history.go(-1);
+                return false;
+            });
+
+
+
+        });
+    </script>
+    <script type="text/javascript">
+
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            var q1val = localStorage.getItem("Qu1val");
+            var q2val = localStorage.getItem("Qu2val");
+            var q3val = localStorage.getItem("Qu3val");
+            var q4val = localStorage.getItem("Qu4val");
+
+
+
+
+
+
+            if (q4val > 3) {
+                $('#share').removeClass('valid-feedback');
+            }
+            else {
+                $('#share').addClass('valid-feedback');
+            }
+
+
+            //=localStorage.getItem("Qu5");
+
+            $("#Qu1SliderVal").text(localStorage.getItem("Qu1en"));
+            $("#Qu2SliderVal").text(localStorage.getItem("Qu2en"));
+            $("#Qu3SliderVal").text(localStorage.getItem("Qu3en"));
+            $("#Qu4SliderVal").text(localStorage.getItem("Qu4en"));
+
+            //$("#Qu5SliderVal").text(localStorage.getItem("Qu5"));
+
+
+if(!q1val){
+q1val=3;
+localStorage.setItem("Qu1valen",3);
+$("#Qu1SliderVal").text("Neutral");
+localStorage.getItem("Qu1en","Neutral");
+}
+if(!q2val){
+q2val=3;
+localStorage.setItem("Qu2valen",3);
+$("#Qu2SliderVal").text("Neutral");
+localStorage.getItem("Qu2en","Neutral");
+}
+if(!q3val){
+q3val=3;
+localStorage.setItem("Qu3valen",3);
+$("#Qu3SliderVal").text("Neutral");
+localStorage.getItem("Qu3en","Neutral");
+}
+if(!q4val){
+q4val=3;
+localStorage.setItem("Qu4valen",3);
+$("#Qu4SliderVal").text("Neutral");
+localStorage.getItem("Qu4en","Neutral");
+}
+
+
+
+            var radiocheck = localStorage.getItem("Qu5en");
+			
+            if (radiocheck) {
+
+                $('input[name="question5"][value="' + radiocheck + '"]').prop('checked', true);
+} else {
+                localStorage.setItem("Qu5en", 6);
+                radiocheck=6;
+                $('input[name="question5"][value="6"]').prop('checked', true);
+
+            }
+
+            var answerQ1;
+            var result1;
+            $("#Qu1").slider({
+                value: q1val,
+                formatter: function (value) {
+                    answerQ1 = value;
+                    switch (value) {
+                        case 1:
+                            result1 = "Strongly Disagree";
+                            break;
+                        case 2:
+                            result1 = "Disagree";
+                            break;
+                        case 3:
+                            result1 = "Neutral";
+                            break;
+                        case 4:
+                            result1 = "Agree";
+                            break;
+                        case 5:
+                            result1 = "Strongly Agree";
+                            break;
+                    }
+                    return result1;
+                },
+            });
+            $("#Qu1").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu1en", result1);
+                localStorage.setItem("Qu1valen", answerQ1);
+                $("#Qu1SliderVal").text(result1);
+            });
+
+            var answerQ2;
+            var result2;
+            $("#Qu2").slider({
+                value: q2val,
+                formatter: function (value) {
+                    answerQ2 = value;
+                    switch (value) {
+                        case 1:
+                            result2 = "Strongly Disagree";
+                            break;
+                        case 2:
+                            result2 = "Disagree";
+                            break;
+                        case 3:
+                            result2 = "Neutral";
+                            break;
+                        case 4:
+                            result2 = "Agree";
+                            break;
+                        case 5:
+                            result2 = "Strongly Agree";
+                            break;
+                    }
+                    return result2;
+                },
+            });
+            $("#Qu2").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu2en", result2);
+                localStorage.setItem("Qu2valen", answerQ2);
+                $("#Qu2SliderValen").text(result2);
+            });
+            var answerQ3;
+            var result3;
+            $("#Qu3").slider({
+                value: q3val,
+                formatter: function (value) {
+                    answerQ3 = value;
+                    switch (value) {
+                        case 1:
+                            result3 = "Strongly Disagree";
+                            break;
+                        case 2:
+                            result3 = "Disagree";
+                            break;
+                        case 3:
+                            result3 = "Neutral";
+                            break;
+                        case 4:
+                            result3 = "Agree";
+                            break;
+                        case 5:
+                            result3 = "Strongly Agree";
+                            break;
+                    }
+                    return result3;
+                },
+            });
+            $("#Qu3").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu3en", result3);
+                localStorage.setItem("Qu3valen", answerQ3);
+                $("#Qu3SliderVal").text(result3);
+            });
+            var answerQ4;
+            var result4;
+            $("#Qu4").slider({
+                value: q4val,
+                formatter: function (value) {
+                    answerQ4 = value;
+                    switch (value) {
+                        case 1:
+                            result4 = "Strongly Disagree";
+                            break;
+                        case 2:
+                            result4 = "Disagree";
+                            break;
+                        case 3:
+                            result4 = "Neutral";
+                            break;
+                        case 4:
+                            result4 = "Agree";
+                            break;
+                        case 5:
+                            result4 = "Strongly Agree";
+                            break;
+                    }
+                    return result4;
+                },
+            });
+            $("#Qu4").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu4", result4);
+                if (result4 == "Agree" || result4 == "Strongly Agree") {
+                    //document.getElementById("share").removeClass = "valid-feedback";
+                    $('#share').removeClass('valid-feedback');
+                }
+                else {
+                    $('#share').addClass('valid-feedback');
+                }
+                localStorage.setItem("Qu4valen", answerQ4);
+                $("#Qu4SliderVal").text(result4);
+            });
+
+            var q5val;
+
+            var answerQ5;
+            $('input[name="question5"]').change(function () {
+                answerQ5 = $(this).val();
+                q5val = answerQ5;
+                localStorage.setItem("Qu5en", $(this).val());
+            });
+
+            const iframe = document.querySelector('iframe');
+            const channel = new MessageChannel();
+            const port1 = channel.port1;
+
+            function ThankYouFunction() {
+                ThankYouFunctionDartside.postMessage(answerQ1 + ',' + answerQ2 + ',' + answerQ3 + ',' + answerQ4 + ',' + radiocheck);
+            }
+
+            function ShareUserLink() {
+                ShareLinkDartSide.postMessage("share");
+            }
+
+            $('.thankyou-btn').click(function () {
+                ThankYouFunction();
+            });
+
+
+            $('#share a').click(function () {
+                ShareUserLink();
+            });
+
+            $('.surveylink').click(function () {
+                Survey();
+            });
+
+            function Survey() {
+                 SurveyDartSide.postMessage("survey");
+            }
+            $('.changeLanguage').click(function(){
+            changeLanguage();
+           });
+           function changeLanguage(){
+          	ChangeLangDartSide.postMessage("false");
+              }
+        });
+
+
+
+
+    </script>
+<script src="../en/back.js"></script>
+
+</body>
+</html>

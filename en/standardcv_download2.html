@@ -1,0 +1,675 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<title>CV</title>
+<link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+<link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="dist/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+<link href="dist/css/cv-gray.css" rel="stylesheet" type="text/css">
+<script src="../objectorianted.js"></script>
+<style>
+    @page
+{
+    size: auto;   /* auto is the initial value */
+
+    /* this affects the margin in the printer settings */
+   margin: 15mm 5mm 5mm 15mm;
+}
+li::marker{ content: '•'; width: 3px;margin-right:2px} 
+ul{margin-right: 10px;
+  padding:0px
+}
+  body{padding: 32px;
+  margin-top : 40px ;
+ 
+  }
+  html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+ 
+  .exp-head{
+    display: flex;
+
+  }
+  .edu-head{
+  display: flex;
+  gap:10px;
+
+  }
+  .edu-body .details{
+    
+  }
+  .exp-head p{
+margin-bottom: 0px;
+}
+.edu-head p{
+  margin-bottom: 0px;
+}
+
+  .horizontal{
+    display: flex;
+    gap:30px;
+ 
+  }
+  .ref-job{
+
+  }
+  h4.bg-purple{
+margin-bottom:20px
+    }
+    .course br
+{ 
+
+  content: "";
+  margin: 0em;
+  display: block;
+ 
+}
+.training br{
+  content: "";
+  margin: 0em;
+  display: block;
+
+}
+.ski-body br{
+  content: "";
+  margin: 0em;
+  display: block;
+
+}
+.exp-head br{
+  content: "";
+  margin: 0em;
+  display: block;
+}
+</style>
+<script type="text/javascript" src="../ar/dist/js/Fontawesome.js"></script>
+</head>
+
+<body >
+	
+  <div class="container-fluid " style="margin-top:30px;padding: 14px;">
+    <div class="pb-1">
+      <div class="pb-1 text-center">
+        <div id="fullName" > <span style="text-transform: capitalize;" class="h1  font-weight-bold name name-scv1">Name Surname</span> </div>
+        <!-- <div  id ="jobObjective"> <span class="text-uppercase sum-body" style="  word-break: break-all;"></span> </div> -->
+		  <div class=""><span id="address" class=""></span></div>
+      <div class=""><span class="countrycity" class=""></span></div>
+      </div>
+      
+      <!-- <div style="text-align: center">
+      
+    
+      
+          <div>
+          <a 
+          id="emailAddress" href="mailto:email@address.com" class="" style="text-decoration: none;"></a>
+        <div class="postal"></div>
+        </div> 
+        <div>
+          <div id ="mobileNum">02 01222222222</div>
+          <div class ="phone appearphone">02 01222222222</div> </div>
+        
+      </div> -->
+      <div style="text-align: center;">
+        <div class="">
+     
+          <div class="postal" style="float:center"></div>
+        
+        </div>
+
+       <div style="display: flex;gap: 80px;justify-content: center;"> 
+        
+        <div style="text-align: center;width: 50%;text-align: start;    display: flex;justify-content: flex-end;
+        align-items: center;"><a id="emailAddress" href="mailto:email@address.com" class=""
+          style="text-decoration: none;">email@address.com</a></div>
+        <div style="width: 50%;text-align: start;"> <div class="phone ">02 01222222222</div> 
+        <div id="mobileNum">02 01222222222</div>  
+        </div> 
+    
+      
+      
+     </div>
+       
+        
+      
+
+      </div>
+    <!-- <div class="pb-1">
+      <div class="pb-1 text-center">
+        <div id="fullName"> <span class="h1 text-uppercase font-weight-bold name name-scv1">Name Surname</span> </div>
+        <div  id ="jobObjective"> <span class="text-uppercase sum-body" style="  word-break: break-all;"></span> </div> -->
+		  <!-- <div class=""><span id="address" class="text-uppercase">Address here Address here</span></div> -->
+      	  <!-- <div class=""><span id="address" class="text-uppercase">Address here Address here</span></div>
+      </div>
+      
+      <div style="text-align: center">
+      
+        <div >  
+        <div style="display: flex;justify-content:space-between;">  
+          <div>
+          <a 
+          id="emailAddress" href="mailto:email@address.com" class="" style="text-decoration: none;"
+          
+          >email@address.com</a></div> 
+          <div id ="mobileNum">02 01222222222</div> </div></div>
+        
+      </div>
+    </div> --> 
+ 
+      <div class="experiences " >
+        <hr class="border-top-2 ">
+        <div class="h4 bg-purple" style="text-transform:capitalize;">Objective</div>
+        <main class="obj-body" style="margin-top:17px"></main>
+      </div>
+      <div class="summary ">
+        <hr class="border-top-2 ">
+        <div class="h4 bg-purple" style="text-transform:capitalize;"> summary </div>
+        <div class="sum-body" style="margin-top:17px" ></div>
+      </div>
+   
+	<div class="exp">
+    <hr class="border-top-2">
+    <div class=" cv-body" style="">
+
+
+        </div>
+        <div class="h4 bg-purple" style="margin-bottom: 20px">Experience</div>
+        <div class="exp-body" style="margin: 20px 20px 8px 20px;"></div>
+   </div>
+      <div class="educations pb-">
+        <hr class="border-top-2">
+        <div class="h4 bg-purple"  style="margin-bottom: 20px">Education</div>
+        <div >
+          
+          <div class="border-purple  timeline-purple">
+            <div class="">
+				 <div class="pr-2 edu-body" style="margin: 20px 20px 0px 20px;">
+              <!-- <div class="itemtitle" id="degree">Degree </div>
+              <div class="itemtitle" > </div>
+              <div class="itemtitle" id="academy">academy </div>
+              <div class="itemtitle" >&nbsp; - &nbsp;</div>
+              <div class="itemtitle" id="edugovernoratename"> edugovernoratename </div>
+              <div class="itemtitle" > , &nbsp;</div>
+              <div class="itemtitle" id="educountryname">educountryname </div> -->
+				
+            </div>
+          
+            <div class="training"  style="margin: 0px 20px 8px 20px;">   </div>
+            
+          </div>
+		
+        </div>
+      </div>
+		</div>
+      <div class="skills ">
+        
+        <hr class="border-top-2">
+        <div class="h4 bg-purple"  style="margin-bottom: 20px">Skills</div>
+        <div class="ski-body" style="margin: 20px 20px 8px 20px;"></div>
+      </div>
+      
+     
+      <div class="additionalsection  additional" style="margin: 20px 20px 8px 20px;">
+       
+      </div>
+
+      <div class="references pb-3">
+        <hr class="border-top-2">
+        <div class="h4 bg-purple"  style="margin-bottom: 20px">References</div>
+        <div class="ref-body" style="margin: 20px 20px 8px 20px;"></div>
+      </div>
+		
+    </div>
+	  
+  </div>
+</div>
+	</body>
+<script  src="js/jquery-3.6.0.min.js"></script> 
+<script  src="js/bootstrap.bundle.js"></script> 
+<scrip src="js/popper.min.js"></scrip>
+
+<script>
+  window.onload = function () {
+
+    cvbuilder = readystate();
+    console.log(cvbuilder)
+
+    if (cvbuilder.cven.summaryar) {
+      if (cvbuilder.cven.summaryar.summary) {
+        console.log("done");
+
+        document.getElementsByClassName("sum-body")[0].innerHTML = cvbuilder.cven.summaryar.summary.replaceAll("•", `<br>•`);
+      }
+    }
+
+    cvbuilder = readystate();
+
+    if (cvbuilder.cven.summaryar) {
+      if (cvbuilder.cven.summaryar.summary) {
+        console.log("done");
+        document.getElementsByClassName("summary")[0].style.display = "block"
+      }
+    }
+    if (cvbuilder.cven.summaryar) {
+      if (!cvbuilder.cven.summaryar.summary) {
+        console.log("done");
+        document.getElementsByClassName("summary")[0].style.display = "none"
+      }
+    }
+    if (!cvbuilder.cven.summaryar) {
+
+      console.log("done");
+      document.getElementsByClassName("summary")[0].style.display = "none"
+
+    }
+  
+    object = cvbuilder.cven.jobobjectivear.jobobjective;
+    document.getElementsByTagName("main")[0].innerHTML = object.replaceAll("•", `<br>•`);
+//     let fullname = localStorage.getItem("fullnameen");
+//     console.log(fullname);
+
+//     document.getElementsByClassName("name-scv1")[0].innerHTML = fullname;
+// ;
+//     let mobile = localStorage.getItem("mobileen");
+//     document.getElementById("mobileNum").innerHTML = mobile;
+//     let email = localStorage.getItem("emailen");
+//     document.getElementById("emailAddress").innerHTML = email;
+//     let address = localStorage.getItem("addressen");
+//     document.getElementById("address").innerHTML = address;
+//     let city = localStorage.getItem("governoratenameen");
+//         document.getElementsByClassName("countrycity")[0].innerHTML= city;
+//         let country = localStorage.getItem("countrynameen");
+//         document.getElementsByClassName("countrycity")[0].innerHTML += " "+country;
+//         let homephone = localStorage.getItem("phoneen");
+//         document.getElementsByClassName("phone")[0].innerHTML= homephone;
+//         let  zipcodeen= localStorage.getItem("zipcodeen");
+//         document.getElementsByClassName("postal")[0].innerHTML=zipcodeen&&"Postal/zip code:"+zipcodeen ;
+
+let fullname = cvbuilder.cven.personalinformation.fullname;
+    console.log(fullname);
+
+
+    document.getElementsByClassName("name-scv1")[0].innerHTML = fullname;
+
+    let mobile = cvbuilder.cven.personalinformation.mobile;
+    document.getElementById("mobileNum").innerHTML = mobile;
+    let email = cvbuilder.cven.personalinformation.email;
+    document.getElementById("emailAddress").innerHTML = email;
+    let address = cvbuilder.cven.personalinformation.address;
+    document.getElementById("address").innerHTML = address;
+    let city = cvbuilder.cven.personalinformation.governoratename;
+    document.getElementsByClassName("countrycity")[0].innerHTML = city;
+    let country = cvbuilder.cven.personalinformation.countryname;
+    document.getElementsByClassName("countrycity")[0].innerHTML += " " + country;
+    let homephone = cvbuilder.cven.personalinformation.phone;
+    document.getElementsByClassName("phone")[0].innerHTML = homephone;
+    let zipcode = cvbuilder.cven.personalinformation.zipcode;
+    document.getElementsByClassName("postal")[0].innerHTML = zipcode && zipcode;
+
+;
+    // document.getElementsByTagName("main")[0].innerHTML = objective;
+
+
+
+
+
+
+    let education = cvbuilder.cven.educationex_data;
+    if (education) {
+
+      if (education.length > 0) {
+        for (let i = 0; i < education.length; i++) {
+          if (education[i] !== null) {
+        document.getElementsByClassName("edu-body")[0].innerHTML += `
+<div class="container-exp">
+<div class="edu-head" style="display:flex;gap:20px">
+  <div style="width:240px">
+   <span class="year" style="font-size:16px">${education[i].eduxitem[0].replace("-"," ")} &nbsp;</span>-
+    <span class="year" style="font-size:16px">${education[i].eduxitem[1].replace("-"," ")}</span> 
+   </div>
+   <div style="flex:2">
+  <p class="university"  style="font-weight: bold;">${education[i].eduxitem[3]}</p>
+
+  <div ><p class="details" >${education[i].eduxitem[2]}</p>
+ <p>${education[i].eduxitem[5]} - ${education[i].eduxitem[4]}</p>
+
+
+ 
+   
+    ${(() => {
+              if (education[i].eduxitem[6].length>0){
+                  return (
+`    <div class="course" style="width:100%;margin-top:7px">   <span style="font-weight:bold;">Courses:</span> 
+  <ul style="max-width:100%; " >${education[i].eduxitem[6].replaceAll("•",`<li>`)}</ul></div>
+`                  )
+              }
+              
+            else{
+              return ""
+            }
+            })()}
+    
+    
+    
+    
+    </div>
+</div>
+<div class="ed-cit">   
+
+
+
+
+ 
+
+
+  <div></div>
+
+
+
+
+</div>
+
+
+`
+
+}
+      }
+
+    }
+  }
+  if (cvbuilder.cven.skills) {
+  debugger;
+  if (cvbuilder.cven.skills.length > 0) {
+    cvbuilder=readystate();
+    var skills = cvbuilder.cven.skills;
+    if(skills.length >0){
+        let arrayskills = ["soft skills", "marketing skills", "management skills", "sales skills", "design skills", "technical skills",
+        "accounting finance skills", "education skills", "web development skills", "business analytics", "additional skills"
+      ];
+
+
+      for(let i=0;i<skills.length;i++){
+        if(skills[i].length>0){
+    
+
+          
+
+          for (let j = 0; j < skills[i].length; j++) {
+            if (skills[i][j]) {
+              if(cvbuilder.cven.cvtype !="Chronological"){
+                if(skills[i][j].textarea ){
+            document.getElementsByClassName("ski-body")[0].innerHTML += `
+       
+<div class="skill" style="width: fit-content;">
+
+  
+<div style="font-size:16px ;font-weight: bold;" class="titleskills">${j == 0 ? arrayskills[i] : ""}</div>
+<div style="flex:3">
+  <span ">${skills[i][j].input} &nbsp;</span><span>${skills[i][j].textarea && ':'}</span>
+
+  <div style="display:block;margin-left:20px;"> ${skills[i][j].textarea&& skills[i][j].textarea .replaceAll("•", `<br>•`)}</div>
+ 
+  </div>
+`}
+let allskills=document.getElementsByClassName("titleskills");
+  for(let i=0;i<allskills.length;i++){
+if(allskills[i].innerHTML!=""){
+  allskills[i].style.display="block"
+  allskills[i].style.marginTop="20px";
+}
+  }
+}
+if(cvbuilder.cven.cvtype !="Chronological"){
+if(!skills[i][j].textarea ){
+  document.getElementsByClassName("ski-body")[0].innerHTML+=`
+       
+       <div class="skill" style="width: fit-content;">
+       
+         
+       <span style="font-size:16px;font-weight: bold;"class="titleskills" >${j==0?arrayskills[i]:""}</span>
+       <div style="display:flex">  <div style=";font-size:16px;flex:2;"> ${"• "+skills[i][j].input} </div>
+       
+       
+         </div>`
+
+}
+let allskills=document.getElementsByClassName("titleskills");
+  for(let i=0;i<allskills.length;i++){
+if(allskills[i].innerHTML!=""){
+  allskills[i].style.display="block"
+  allskills[i].style.marginTop="20px";
+}
+  }
+}
+if(cvbuilder.cven.cvtype =="Chronological"){
+        document.getElementsByClassName("ski-body")[0].innerHTML+=`
+       
+<div class="skill" style="width: fit-content;">
+
+  
+<span style="font-size:16px;font-weight: bold;" class="titleskills">${j==0?arrayskills[i]:""}</span>
+<div style="display:flex">  <div style="font-size:16px;flex:2"> ${"• "+skills[i][j].input} </div>
+
+
+  </div>
+`
+let allskills=document.getElementsByClassName("titleskills");
+  for(let i=0;i<allskills.length;i++){
+if(allskills[i].innerHTML!=""){
+  allskills[i].style.display="block"
+  allskills[i].style.marginTop="20px";
+
+}
+  }}}
+        
+   
+              }
+            }    }
+
+      }
+    }}
+ 
+   
+     
+  }
+cvbuilder=readystate();
+  skills = cvbuilder.cven.skills;
+  if(skills){
+     
+  
+    let countskibody=0;
+    for(let i=0; i<skills.length;i++){
+      if(skills[i].length==0){
+        countskibody++;
+      }
+    }
+    if(+countskibody== +skills.length){
+      console.log(skills.length);
+      console.log(countskibody);
+
+      document.getElementsByClassName("skills")[0].innerHTML="";
+    }
+   
+   }
+   if (!cvbuilder.cven.skills) {
+          document.getElementsByClassName("skills")[0].innerHTML = "";
+        }
+        if (cvbuilder.cven.skills){
+        if (cvbuilder.cven.skills.length == 0) {
+          document.getElementsByClassName("skills")[0].innerHTML = "";
+    
+        }}
+
+
+
+
+    cvbuilder = readystate();
+  let reference = cvbuilder.cven.references;
+  if (reference.refrequest === 0) {
+document.getElementsByClassName("ref-body")[0].innerHTML="References available on request";
+}
+if(reference.refrequest===1){
+  let refdata = cvbuilder.cven.references.references_data;
+   console.log(refdata);
+   for(let i=0;i<refdata.length;i++){
+    if(refdata[i]){
+    if(refdata[i].refitem.length>0){
+      document.getElementsByClassName("ref-body")[0].innerHTML+=`
+      
+      <div class="ref-body" >
+ 
+        <div class="ref-details " style="display: flex;
+    justify-content: space-between;">
+          <span style="margin-top:10px; ">${refdata[i].refitem[0]}</span>
+          <span style="margin-top:10px">${refdata[i].refitem[3]}</span>
+       
+          </div>
+        </div>
+
+      
+      
+      `
+
+      
+    }}
+   }
+}
+
+
+
+let exp = JSON.parse(localStorage.getItem("cvbuilder")).cven.experience_data;
+if (cvbuilder.cven.experience_data){
+  if (cvbuilder.cven.experience_data.length > 0) {
+
+
+    if (exp.length > 0) {
+      for (let i = 0; i < exp.length; i++) {
+        if (exp[i] !== null) {
+            document.getElementsByClassName("exp-body")[0].innerHTML += `
+  <div class="container-exp">
+    <div class=exp-head style="display:flex;
+
+gap:20px;
+    margin-top:20px"
+}>
+<div style="width:240px"> <span class="year" style="font-size:16px">${exp[i].expitem[0].replace("-"," ")} &nbsp;</span>-
+      <span class="year"  style="font-size:16px">${exp[i].expitem[1].replace("-"," ")}</span></div>
+   
+<div style="flex:2" >
+<p class="company" style="font-size:20px;font-weight: bold;">${exp[i].expitem[3]}</p>
+ 
+   
+      <p style="margin-bottom:0px">${exp[i].expitem[2]}<p>
+
+        <p style="margin-bottom:0px">${exp[i].expitem[5]} - ${exp[i].expitem[4]}</p>
+    
+      <p style= "">${exp[i].expitem[6].replaceAll("•",`<br>•`)}</p>
+</div>
+  
+</div>
+  `}}
+          }
+          if(exp.length==1&&exp[0]==null){
+
+document.getElementsByClassName("exp-body ")[0].innerHTML="";
+}
+
+        }}
+
+
+
+        
+
+
+if (!cvbuilder.cven.experience_data) {
+
+document.getElementsByClassName("exp")[0].innerHTML = "";
+
+}
+
+if (cvbuilder.cven.experience_data) {
+    if (cvbuilder.cven.experience_data == 0) {
+      document.getElementsByClassName("exp")[0].innerHTML = "";
+    }
+   
+  }
+
+
+  if (cvbuilder.cven.addsection
+  ) {
+
+    if (cvbuilder.cven.addsection.length > 0) {
+      let additionaray = cvbuilder.cven.addsection
+     for(let i=0;i<additionaray.length;i++){
+      //  if(additionaray[i][0]){
+        console.log("here div add");
+         document.getElementsByClassName("additionalsection")[0].innerHTML+=`
+         
+         <div>
+           <hr class="border-top-2">
+        <div class="h4 bg-purple"  style="margin-bottom: 20px">${additionaray[i].title}</div>
+        <div class="add-body">
+          <span>${additionaray[i].desc.replaceAll("\n",`<br>`)}</span>
+
+        
+        </div>
+         </div>
+         `
+      //  }
+       
+     }}
+     else{
+       document.getElementsByClassName("additional")[0].innerHTML=""
+     }
+    
+     if (cvbuilder.cven.addsection.length == 0) {
+      document.getElementsByClassName("additional")[0].innerHTML = ""
+    }
+  }
+  if (!cvbuilder.cven.addsection) {
+    document.getElementsByClassName("additional")[0].innerHTML = ""
+  }
+
+ 
+ 
+
+</script><script>
+
+</script><script>
+    cvbuilder = readystate();
+    if (cvbuilder.cven.training) {
+   document.getElementsByClassName("training")[0].innerHTML=`<span style=  
+     "font-weight: bold;"> Training:</span> <ul>${cvbuilder.cven.training.replaceAll("•",`<li>`)}</ul>`
+
+  }
+ </script>
+
+
+<script>
+   cvbuilder=readystate();
+  if (  cvbuilder.cven.personalinformation.fullname === null) {
+    document.title = 'My Cv';
+  } else {
+    document.title =cvbuilder.cven.personalinformation.fullname + "_Cv";
+  }
+  cvbuilder=readystate();
+  if(!cvbuilder.cven.personalinformation.phone){
+document.getElementsByClassName("appearphone")[0].style.display="none"
+}
+if (!cvbuilder.cven.skills) {
+          document.getElementsByClassName(" skills")[0].innerHTML = "";
+        }
+        if (!cvbuilder.cven.skills) {
+        document.getElementsByClassName("skills")[0].innerHTML = "";
+      }
+      if (cvbuilder.cven.skills){
+      if (cvbuilder.cven.skills.length == 0) {
+        document.getElementsByClassName("skills")[0].innerHTML = "";
+      }}
+</script>
+</body>
+</html>

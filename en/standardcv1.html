@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>standard-cv1</title>
+  <link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="dist/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+  <link href="dist/css/cv-onestyle.css" rel="stylesheet" type="text/css">
+  <script src="../ar/dist/js/Fontawesome.js"></script>
+  <script src="../objectorianted.js"></script>
+  <style>
+      @page
+{
+    size: auto;   /* auto is the initial value */
+
+    /* this affects the margin in the printer settings */
+   margin: 15mm 5mm 5mm 15mm;
+}
+    body{padding: 32px;
+  margin-top : 40px ;
+ 
+  }
+    html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+    h4,h5,h2,h1{
+      margin:0px ;
+    }
+   .course br{ 
+content: "";
+  margin: 0em;
+  display: block;
+
+ 
+}
+.training br{
+  content: "";
+  margin: 0em;
+  display: block;
+
+}
+ul{margin-right: 10px;
+  padding:0px
+}
+li::marker{ content: '•'; width: 3px;margin-right:2px} 
+.training br,.exp-details br,.ski-body br{
+  content: "";
+  margin: 0em;
+  display: block;
+
+}
+  @media only screen and (max-width: 500px) {
+  .edu-head{    
+  }
+   .edu-head > div{    margin-right: 0px
+  }
+}
+
+  </style>
+ 
+</head>
+
+<body id="content2">
+  <div class="container">
+    <div>
+      <h1 class="name-scv1" style="text-transform: capitalize;">
+
+      </h1>
+      <!-- <p class="job-scv1 sum-body"style="font-size:14px;word-break:break-word;";></p> -->
+      <div class="head-scv1" style="margin: 20px 0px">
+        <div class="infocontact-scv1">
+<div style="display:flex;gap:90px"> <div class="mob-scv1"> 
+  <div><i style="width: 25px;height:28px" class='fa fa-mobile'></i><span id="mobileNum"></span> </div>
+   
+<div class="email-scv1" style="display: flex;"> <i class="fas fa-envelope"  style="width: 25px;height:28px" >
+</i> <span style="text-decoration:none">
+  <a id="emailAddress"
+      href="mailto:email@address.com" class="" style="text-decoration:none ;width: 25px;height:28px "></a></span> </div>
+      <div class="appearphone" style="    margin-top: 3px;"><i class='fa fa-phone' style="width: 25px;height:28px" ></i>
+
+        <span class="phone">ee</span></div>
+     
+        <div>
+
+          <span  class="postal">ee</span></div>
+
+</div>
+<div class=" add-scv1" style="">
+  <i class="fas fa-map-marker" style="width: 1em; width: 25px;height:28px" ></i><span id="address" ></span>
+<span class="countrycity" style=""></span>
+
+</div>
+      
+        </div>
+      
+  
+    </div>
+    <div class="jobObjective"  style="margin: 20px 0px">
+      <div class="exp-header"><i class="fas fa-bullseye" ></i>
+        <h4> objective </h4>
+      </div>
+      <div class="obj-body"style="    margin: 17px 29px 0px 29px;">
+
+      </div>
+
+    </div>
+    <div class="summary"style="margin: 20px 0px">
+      <div class="exp-header"><i class="fas fa-suitcase"></i>
+        <h4>summary</h4>
+      </div>
+      <div class="sum-body" style="margin:17px 29px 0px 29px">
+
+      </div>
+
+    </div>
+    <!-- <main style=" word-break: break-all;">
+      My Objective Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, error nulla vitae iusto sint temporibus ipsa et
+      quo quasi vel, commodi eum optio excepturi minus id expedita ipsum nobis corrupti
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error eaque
+    </main> -->
+    <div class="exp">
+      <div class="exp-header"><i class="fas fa-calendar"></i>
+        <h4>Experience</h4>
+      </div>
+      <div class="exp-body" style="margin: 20px 29px 15px 29px;">
+
+      </div>
+
+    </div>
+
+    <div class="Education">
+      <div class="Education-header"><i class="fas fa-graduation-cap"></i>
+<h4>Education</h4></div>
+<div class="edu-body" style="margin: 20px 29px 0px 29px;"></div>
+
+</div>
+
+            <div class="training"  style="   margin: 0px 0px 30px 31px">   </div>
+
+</div>
+<div class=" skills">
+          <div class="skills-header"><i class="fas fas fa-cog"></i>
+            <h4>skills</h4>
+          </div>
+<div class="ski-body" style="    margin: 20px 29px;">
+
+</div>
+
+      </div>
+      <!-- <div class="summary">
+        <div class="summary-header"><i class="fas fas fa-edit"></i>
+          <h4>summary</h4>
+        </div>
+        <p class="sum-body"></p>
+
+      </div> -->
+      <div class="additional">
+        <!-- <div class="add-header"><i class="fas fas fa-edit"></i>
+          <h4>additional info</h4>
+        </div> -->
+      
+
+      </div>
+      <div class="reference" style="    padding-bottom: 20px;
+      ">
+        <div class="reference-header"><i class="fas fas fa-users"></i>
+          <h4>References</h4>
+        </div>
+        <div class="ref-body" style="margin:30px 29px 0px 29px">
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <script>
+      window.onload = function () {
+       cvbuilder = readystate();
+        console.log(cvbuilder)
+
+        if (cvbuilder.cven.summaryar) {
+          if (cvbuilder.cven.summaryar.summary) {
+            console.log("done");
+
+            document.getElementsByClassName("sum-body")[0].innerHTML = cvbuilder.cven.summaryar.summary.replaceAll("•", `<br>•`);
+          }
+        }
+
+        cvbuilder = readystate();
+
+        if (cvbuilder.cven.summaryar) {
+          if (cvbuilder.cven.summaryar.summary) {
+            console.log("done");
+            document.getElementsByClassName("summary")[0].style.display = "block"
+          }
+        }
+        if (cvbuilder.cven.summaryar) {
+          if (!cvbuilder.cven.summaryar.summary) {
+            console.log("done");
+            document.getElementsByClassName("summary")[0].style.display = "none"
+          }
+        }
+        if (!cvbuilder.cven.summaryar) {
+
+          console.log("done");
+          document.getElementsByClassName("summary")[0].style.display = "none"
+
+        }
+
+         let fullname = cvbuilder.cven.personalinformation.fullname;
+        console.log(fullname);
+
+        document.getElementsByClassName("name-scv1")[0].innerHTML = fullname;
+
+        let mobile = cvbuilder.cven.personalinformation.mobile;
+        document.getElementById("mobileNum").innerHTML = mobile;
+
+      // if(mobile.includes("+")==true){
+      //   document.getElementById("mobileNum").innerHTML =  mobile.replace("+"," ");  
+      //   console.log("5511")
+      // }
+      // else{
+      // document.getElementById("mobileNum").innerHTML = mobile;
+      // }
+        let email = cvbuilder.cven.personalinformation.email;
+        document.getElementById("emailAddress").innerHTML = email;
+        let address = cvbuilder.cven.personalinformation.address;
+        document.getElementById("address").innerHTML = address;
+        let city = cvbuilder.cven.personalinformation.governoratename;
+        document.getElementsByClassName("countrycity")[0].innerHTML = city;
+        let country = cvbuilder.cven.personalinformation.countryname;
+        document.getElementsByClassName("countrycity")[0].innerHTML += " " + country;
+        let homephone = cvbuilder.cven.personalinformation.phone;
+        document.getElementsByClassName("phone")[0].innerHTML = homephone;
+        let zipcode = cvbuilder.cven.personalinformation.zipcode;
+        document.getElementsByClassName("postal")[0].innerHTML = zipcode && '<i class="fa fa-fax"style="width: 25px;height:28px; ;" ></i>' + zipcode;
+
+        let objective = cvbuilder.cven.jobobjectivear.jobobjective;
+        document.getElementsByClassName("obj-body")[0].innerHTML = objective.replaceAll("•",`<br>•`);
+
+        let exp = JSON.parse(localStorage.getItem("cvbuilder")).cven.experience_data;
+        if (cvbuilder.cven.experience_data){
+        if (cvbuilder.cven.experience_data.length > 0) {
+
+          console.log("exp")
+          if (exp.length > 0) {
+            debugger;
+            for (let i = 0; i < exp.length; i++) {
+              document.getElementsByClassName("exp-body")[0].innerHTML += `
+  <div class="container-exp" style="display:flex;align-items: flex-start;margin-bottom:0px;gap:10px">
+ 
+      <div style="font-size:15px;width:240px"> <span class="year "style=";font-size:16px;">${exp[i].expitem[0].replace("-"," ")}</span>&nbsp;-&nbsp;
+      <span class="year " style=";font-size:16px;">${exp[i].expitem == "Present" ? " Present" : exp[i].expitem[1].replace("-"," ")}</span></div>
+ 
+
+   
+   <div style="flex:3">
+      <p class="exp-details"style="font-weight: bold;">${exp[i].expitem[3].replace("-"," ")}</p>
+
+      <p class="company" style=";font-weight: none;margin:0px 0px">${exp[i].expitem[2].replace("-"," ")}</p>
+<p>${exp[i].expitem[5]} - ${exp[i].expitem[4]}</p>
+      <ul class="exp-details"style="">${exp[i].expitem[6].replaceAll("•", `<li>`)}</ul>
+</div>
+
+
+
+  
+
+  `}
+          }
+
+          if (exp.length == 1 && exp[0] == "null") {
+
+            document.getElementsByClassName("exp")[0].innerHTML = "";
+          }
+        }}
+
+        if (cvbuilder.cven.experience_data) {
+          if (exp.length == 0) {
+            document.getElementsByClassName("exp")[0].innerHTML = "";
+          } if (!cvbuilder.cven.experience_data) {
+
+            document.getElementsByClassName("exp")[0].innerHTML = "";
+
+          }}
+          if (!cvbuilder.cven.experience_data) {
+    
+
+            document.getElementsByClassName("exp")[0].innerHTML = "";
+
+          }
+          let education = cvbuilder.cven.educationex_data;
+          if (education) {
+            debugger
+            if (education.length > 0) {
+              debugger;
+              for (let i = 0; i < education.length; i++) {
+                if (education[i] !== null) {
+                  console.log(education[i]);
+                  document.getElementsByClassName("edu-body")[0].innerHTML += `  <div class="container-exp" style="margin-bottom:0px; width:100%">
+            <div style="display:flex;    align-items: flex-start;gap:10px">
+            <div class="edu-head" style="width:240px">
+
+               <span class="year " style="font-size:15px">${education[i].eduxitem[0].replace("-"," ")}&nbsp;</span>-&nbsp;
+                <span class="year"style="font-size:15px">${education[i].eduxitem[1].replace("-"," ")}</span> 
+
+
+        </div>
+        <div style="flex:3">
+          <p class="details" style="font-weight:bold" >${education[i].eduxitem[3]}</p>
+
+
+
+     <div ><p class="details" >${education[i].eduxitem[2]}</p>
+      <p>${education[i].eduxitem[5]} - ${education[i].eduxitem[4]}</p>
+            ${(() => {
+                      if (education[i].eduxitem[6].length > 0) {
+                        return (
+                          `    <div class="course" style="width:100%;margin-top:15px">   <div ><span style="font-weight: bold;">Courses:</span>
+        </div> <ul style="max-width:100%;   " >${education[i].eduxitem[6].replaceAll("•", `<li>`)}</ul></div>
+        `                  )
+                      }
+
+                      else {
+                        return ""
+                      }
+                    })()}
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+          `
+  
+
+        }
+              }
+
+            }
+
+
+
+          }
+      
+    
+        console.log("char");
+      
+    // let skills=JSON.parse(localStorage.getItem('skillsarrayen'));
+      if (cvbuilder.cven.skills) {
+          if (cvbuilder.cven.skills.length > 0) {
+            var skills = cvbuilder.cven.skills;
+              if (skills.length > 0) {
+       let arrayskills=["soft skills","marketing skills","management skills","sales skills","design skills","technical skills",
+      "accounting finance skills","education skills","web development skills","business analytics","additional skills"
+      ];
+
+      for(let i=0;i<skills.length;i++){
+        if(skills[i].length>0){
+    
+
+          for (let j = 0; j < skills[i].length; j++) {
+            if (skills[i][j]) {
+          
+
+if(cvbuilder.cven.cvtype !="Chronological"){
+
+  if(skills[i][j].textarea ){
+        document.getElementsByClassName("ski-body")[0].innerHTML+=`
+       
+<div class="skill" style="display:flex; margin-bottom:15px;gap:10px">
+
+  
+<div style="font-weight:bold;width:240px">${j==0?arrayskills[i]:""}</div>
+<div style="flex:2">
+  <span ">${ "• "+ skills[i][j].input +" :"} &nbsp;</span>
+
+  <div style="margin-left:30px"> ${skills[i][j].textarea &&skills[i][j].textarea.replaceAll("•",`<br>•`)}<div></div>
+    </div>
+  </div>
+`}
+
+if(!skills[i][j].textarea ){
+        document.getElementsByClassName("ski-body")[0].innerHTML+=`
+       
+<div class="skill" style="display:flex; margin-bottom:15px;gap:10px">
+
+  
+<div style="font-weight: bold;width:240px">${j==0?arrayskills[i]:""}</div>
+<div style="flex:2">
+  <span ">${ "• "+skills[i][j].input} &nbsp;</span>
+
+    </div>
+  </div>
+`}
+let allskills=document.getElementsByClassName("titleskills");
+  for(let i=0;i<allskills.length;i++){
+if(allskills[i].innerHTML!==""){
+  allskills[i].style.marginTop="20px"
+}
+  }
+
+}
+if(cvbuilder.cven.cvtype =="Chronological"){
+
+
+
+
+  document.getElementsByClassName("ski-body")[0].innerHTML+= `
+       
+<div class="skill" style="width: fit-content margin-bottom:6px">
+
+  
+<div style="font-size:16px ;font-weight: bold;" class="titleskills">${j == 0 ? arrayskills[i] : ""}</div>
+<div style="flex:2">
+  <span style="margin-left:20px">${ skills[i][j].input} &nbsp;</span>
+ 
+  </div>
+`
+
+let allskills=document.getElementsByClassName("titleskills");
+  for(let i=0;i<allskills.length;i++){
+if(allskills[i].innerHTML!==""){
+  allskills[i].style.marginTop="20px"
+}
+  }
+}}
+        
+}
+        }
+      }
+
+      }
+    }
+    
+  }
+   if(cvbuilder.cven.skills){
+  
+  
+    let countskibody=0;
+    for(let i=0; i<skills.length;i++){
+      if(skills[i].length==0){
+        countskibody++;
+      }
+    }
+    if(+countskibody== +skills.length){
+      console.log(skills.length);
+      console.log(countskibody);
+
+      document.getElementsByClassName("skills")[0].innerHTML="";
+    }
+   
+   }
+        if (!cvbuilder.cven.skills) {
+          document.getElementsByClassName("skills")[0].innerHTML = "";
+        }
+        if (cvbuilder.cven.skills){
+        if (cvbuilder.cven.skills.length == 0) {
+          document.getElementsByClassName("skills")[0].innerHTML = "";
+    
+        }}
+
+        cvbuilder = readystate();
+        let reference = cvbuilder.cven.references;
+        console.log(reference);
+        if (reference.refrequest === 0) {
+document.getElementsByClassName("ref-body")[0].innerHTML="References available on request";
+    }
+        if (reference.refrequest === 1) {
+          let refdata = cvbuilder.cven.references.references_data;
+       console.log(refdata);
+       for(let i=0;i<refdata.length;i++){
+        if(refdata[i]){
+        if(refdata[i].refitem.length > 0){
+          document.getElementsByClassName("ref-body")[0].innerHTML+=`
+          
+          <div class="ref-body" style="display:flex;justify-content:space-between;margin:20px 29px;">
+          
+              <span style="
+    font-weight: 500;">${refdata[i].refitem[0]}</span><br>
+              <span style=""">${refdata[i].refitem[3]}</span>
+             
+              </div>
+            </div>
+
+          
+          
+          `
+
+          
+        }
+       }}
+    }
+
+
+
+   
+  
+        if (cvbuilder.cven.addsection) {
+
+          if (cvbuilder.cven.addsection.length > 0) {
+            let additionaray = cvbuilder.cven.addsection;
+    
+        for(let i=0;i<additionaray.length;i++){
+     
+            document.getElementsByClassName("additional")[0].innerHTML+=`
+            <div class="add-header"><i class="fas fas fa-edit"></i>
+          <h4>${additionaray[i].title}</h4>
+          
+            </div>
+          <div style="width: fit-content">
+
+              <span style="padding:  0px 10px;    margin: 20px 29px;display: block;">${additionaray[i].desc.replaceAll("\n",`<br>`)}</span>
+             
+        </div>
+          
+            
+            
+            
+            `
+          
+          
+        }}
+        else{
+          document.getElementsByClassName("additional")[0].innerHTML=""
+        }
+       
+      if (cvbuilder.cven.addsection.length == 0) {
+            document.getElementsByClassName("additional")[0].innerHTML = ""
+          }
+        
+
+      }      
+            if (!cvbuilder.cven.addsection) {
+          document.getElementsByClassName("additional")[0].innerHTML = ""
+        }    
+
+      
+
+
+
+
+        cvbuilder = readystate();
+        if (cvbuilder.cven.training) {
+  document.getElementsByClassName("training")[0].innerHTML=`<span style="font-weight:bold">
+     Training:</span> <ul>${cvbuilder.cven.training.replaceAll("•",`<li> `)}</ul>`
+       
+
+ }
+
+   cvbuilder=readystate();
+  if (  cvbuilder.cven.personalinformation.fullname === null) {
+    document.title = 'My Cv';
+  } else {
+    document.title =cvbuilder.cven.personalinformation.fullname + "_Cv";
+  }
+
+      }
+      cvbuilder=readystate();
+        if(!cvbuilder.cven.personalinformation.phone){
+document.getElementsByClassName("appearphone")[0].style.display="none"
+}
+if (!cvbuilder.cven.skills) {
+          document.getElementsByClassName(" skills")[0].innerHTML = "";
+        }
+        if (!cvbuilder.cven.skills) {
+        document.getElementsByClassName("skills")[0].innerHTML = "";
+      }
+      if (cvbuilder.cven.skills){
+      if (cvbuilder.cven.skills.length == 0) {
+        document.getElementsByClassName("skills")[0].innerHTML = "";
+      }}
+  
+   
+
+  function skilldraw(){
+      let allskills=document.getElementsByClassName("titleskills");
+  for(let i=0;i<allskills.length;i++){
+if(allskills[i].innerHTML!==""){
+  allskills[i].style.marginTop="30px"
+}
+  }
+  }
+       
+</script>
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Jekyll v4.1.1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+<title>Maharati</title>
+<link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+
+<!-- Bootstrap core CSS -->
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="dist/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css"/>
+<link href="dist/css/styles.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="album.css" rel="stylesheet">
+<style>
+    .job-icon {
+    margin-top: -55px;
+    margin-left: -11px !important;
+}
+</style>
+</head>
+<body>
+    <header class="fixed-top mb-5">
+        <div class="navbar navbar-dark bg-primary">
+            <div class="container d-flex justify-content-between">
+                <a  onclick="prevlink()" class="previous round text-white text-xl" >❮</a> 
+                <a href="home.html" class="navbar-brand d-flex align-items-center m-auto"> <img src="../shared_dist/images/logo.svg" alt="" height="30px;" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="container-menu" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+          <div class="container pb-1 text-center">
+            <p class="text-white text-12">Please choose your language</p>
+            <a  onclick="selectlangen()" type="button" class="btn btn-light bg-transparent-50 text-white text-shadow pr-4 pl-4 mr-2"> <span><img src="dist/images/en.svg" alt="" width="30px"/></span> English</a>
+            <a onclick="selectlangar()" type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 ml-2 changeLanguage" href="../ar/apply-for-job.html"> العربية <span><img src="../shared_dist/images/ar.svg" alt="" width="30px"/></span> </a> </div>
+          <div class="container pt-1 pb-2 text-center pr-5 pl-5"> <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block" href="rating.html"> <span><img src="dist/images/rate.svg" alt="" width="30px"/></span> Rate Maharati App</a> </div>
+          <div class="container text-center pr-5 pl-5"> <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block surveylink" href="#"> <span><img src="dist/images/survey.svg" alt="" width="30px"/></span> Survey</a> </div>
+        </div> -->
+        <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+            <div class="container p-1 text-center">
+                <div style="display:flex;margin:auto;justify-content: center;gap:18px; color:white">
+
+                    <div><a style="cursor: pointer" href="rating.html">  <img src="../shared_dist/iconsmenu/Group.png" width="20px" height="20px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;">Rate us</p></a></div>
+
+
+                    <div> <a class="surveylink" style="cursor: pointer" href=""><img src="../shared_dist/iconsmenu/Vector.png" width="20px" height="20px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;"> Survey</p></a></div>
+                    <div>
+                        <a style="cursor: pointer" onclick=" selectlangar()" href="../ar/practice-cv-summary.html"><img src="../shared_dist/images/ar.svg" width="30px" height="22px" /><p style="font-size: 9px;color: white;margin-top:4px;font-weight: bold;">Language</p></a>
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="why-cv.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group747.png" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">CV Tips</div>
+                        </a>
+                    </div>
+                    <div style="width: 40%;">
+                        <a href="my-cv.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group746.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">  CV Builder</div>
+                        </a>
+
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly; ">
+
+                    <div style="width: 40%;">
+                        <a href="skills.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group748.png" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">Skills Assessment</div>
+                        </a>
+                    </div>   <div style="width: 40%;">
+                        <a href="vr.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group749.png" width="55px" />
+                            <div style="margin-top:7px ;font-size: 14px;font-weight: bold;">The Interview</div>
+                        </a>
+                    </div>
+
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="practice-interview.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group753.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Practice Interview</div>
+                        </a>
+                    </div>   <div style="width: 40%;">
+                        <a href="marketing-myself.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group752.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Marketing Myself</div>
+                        </a>
+                    </div>
+                </div>
+                <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:px ;justify-content: space-evenly;">
+
+                    <div style="width: 40%;">
+                        <a href="job.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group751.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;">  Job Announcement</div>
+                        </a>
+                    </div>  <div style="width: 40%;">
+                        <a href="apply-for-job.html" style="color: white;">
+                            <img src="../shared_dist/iconsmenu/Group750.svg" width="55px" />
+                            <div style="margin-top:7px;font-size: 14px;font-weight: bold;"> Apply for a job</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- <p class="text-white text-12">يرجى اختيار لغتك</p>
+                  <a   onclick="selectlangen()"  href="../en/apply-for-job.html" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4  mr-2 changeLanguage" > <span><img src="dist/images/en.svg" alt="" width="30px"/></span> English</a>
+                  <a  onclick="selectlangar()"type="button" class="btn btn-light bg-transparent-50 text-white text-shadow pr-4 pl-4 ml-2"> <span><img src="../shared_dist/images/ar.svg" alt="" width="30px"/></span> العربية </a>
+                </div>
+                  <div class="container pt-1 pb-2 text-center pr-5 pl-5">
+                    <a type="button"class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block"href="rating.html"><span><img src="dist/images/rate.svg" alt="" width="30px" style="    margin-left: 8px;"/></span>قيم تطبيق مهاراتي</a>
+                  </div>
+                  <div class="container text-center pr-5 pl-5">
+                    <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block surveylink" href="#"><span><img src="dist/images/survey.svg" alt="" width="30px"  style="    margin-left: 8px;"/></span>إستطلاع الرأى</a>  -->
+            </div>
+        </div>
+        <img src="../shared_dist/images/menu-shad.svg" alt="" width="100%" />
+    </header>
+
+    <main role="main" class="mb-100 mt-100">
+        <section class="pl-4 pr-4">
+            <div class="text-center">
+                <p class="btn border-10 bg-red text-uppercase font-weight-bold text-white m-0 pl-5 pr-5" style="margin-bottom: -9px !important;">PRACTICE</p>
+            </div>
+            <div class="bg-primary border-30 pt-3 border-top-red">
+                <div class="row pl-4 pr-4">
+                    <div class="col-8 text-white ">
+                        <h2 class="font-weight-bold">CV Tips</h2>
+                        <p>Tips on professional writing of CVs</p>
+                    </div>
+                    <div class="col-4"><img src="../shared_dist/images/CV-Tips-icon.svg" alt="" width="100%" /></div>
+                </div>
+                <div class="bg-white border-30 p-4 box-shad-2">
+                    <div class="h4 font-weight-bold text-deep-blue"> Summary </div>
+                    <div class="h4 font-weight-bold text-primary-deep"> Marketing Myself </div>
+                    <hr>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> Personal details </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Are name and addresses of my schools included in the CV?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-green border-10 mt-30" id="img001" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val001">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> Career goal </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Have I included my career goal statement to describe my job objective and ambitions?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-orange border-10 mt-30" id="img002" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val002">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> Educational history </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Are name and addresses of my schools included in the CV?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-mauve border-10 mt-30 " id="img003" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val003">  </div>
+                                </div>
+                            </div>
+                            <p class="text-16 p-2 text-deep-blue">Are relevant subjects of my studies indicated in the CV?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-green border-10 mt-30" id="img004" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val004"> </div>
+                                </div>
+                            </div>
+                            <p class="text-16 p-2 text-deep-blue">Are notable achievements included in this section?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-melon border-10 mt-30 " id="img005" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val005">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> Work-related experience </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Are the jobs I did in the past listed in this section of the CV?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-mauve border-10 mt-30 " id="img006" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val006">  </div>
+                                </div>
+                            </div>
+                            <p class="text-16 p-2 text-deep-blue">Have I included the skills and duties involved in these jobs?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-green border-10 mt-30" id="img007" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val007">  </div>
+                                </div>
+                            </div>
+                            <p class="text-16 p-2 text-deep-blue">Are details on employers and places of employment specified in the CV?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-melon border-10 mt-30 " id="img008" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val008">  </div>
+                                </div>
+                            </div>
+                            <p class="text-16 p-2 text-deep-blue">Are dates of employment indicated in this section?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-melon border-10 mt-30 " id="img009" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val009">  </div>
+                                </div>
+                            </div>
+                            <p class="text-16 p-2 text-deep-blue">Have I included relevant examples of school-based work?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-orange border-10 mt-30" id="img0010" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val0010">  </div>
+                                </div>
+                            </div>
+                            <p class="text-16 p-2 text-deep-blue">Have I included relevant examples of other types of activities (e.g. internships, work with voluntary organizations)?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-mauve border-10 mt-30" id="img0011" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val0011">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> Interests </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Are my interests, social activities and hobbies that highlight useful skills and experience included in the CV?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-green border-10 mt-30" id="img0012" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val0012">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> References </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Have I contacted at least two persons who are willing to give me a reference?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-mauve border-10 mt-30 " id="img0013" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val0013">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> CV </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Is my CV ready to be sent to employers?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-green border-10 mt-30" id="img0014" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val0014">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="h5 font-weight-bold text-primary-deep"> Cover letter </div>
+                        <div class="row p-3 border-20 bg-light-g">
+                            <p class="text-16 p-2 text-deep-blue">Is the cover letter finalized and ready to be sent?</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center p-1"> <img class="bg-green border-10 mt-30" id="img0015" alt="" width="70%" /> </div>
+                                    <div class="col-9 pl-0" id="val0015">  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-4"> <a href="practice-cv.html" class="btn border-10 bg-primary font-weight-bold box-shad-2 text-white">Review </a> <a href="home.html" class="btn border-10 bg-melon font-weight-bold box-shad-2 text-white">Done</a> </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-muted fixed-bottom pt-3 pb-3 bg-footer">
+        <div class="row d-flex justify-content-around" style="padding:0px 30px;">
+          <div class="col-2 pl-0 text-left"><a href="home.html" class="d-block"><img src="../shared_dist/images/icon-one.png" alt="" width="40px" height="40px" /></a></div>
+          <div class="col-2 pl-0 text-left"><a href="my-cv.html" class="d-block"><img src="../shared_dist/images/icon-two.png" alt="" width="40px" height="40px"/></a></div>
+          <div class="col-2 job-icon" style=""><a href="apply-for-job.html" class="d-block"><img src="../shared_dist/images/job-icon.svg" alt="" width="70px" class="rounded-circle shadow" /></a></div>
+          <div class="col-2 pr-0 text-right"><a href="ar_instructions.html" class="d-block"><img src="../shared_dist/images/icon-three.png" alt="" width="40px" height="40px"/></a></div>
+          <div class="col-2 pr-0 text-right"><a href="vr.html" class="d-block"><img src="../shared_dist/images/icon-four.png" alt="" width="48px" height="40px"/></a></div>
+        </div>
+    </footer>
+    <script src="../ar/dist/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="../ar/dist/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="../ar/dist/js/bootstrap.js"></script>
+    <script src="../ar/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            for (i = 1; i < 16; i++) {
+                imgsrc = localStorage.getItem('opt' + i + '');
+                var imgname;
+                if (imgsrc == 1) {
+                    imgname = "a-completed.svg";
+                    imgcolor = "bg-green";
+                    imgsrc = "Completed";
+                } else if (imgsrc == 2) {
+                    imgname = "a-to-be.svg";
+                    imgcolor = "bg-orange";
+                    imgsrc = "To be completed";
+                } else if (imgsrc == 3) {
+                    imgname = "a-not-to-includ.svg";
+                    imgcolor = "bg-mauve";
+                    imgsrc = "Decided not to include";
+                } else if (imgsrc == 4) {
+                    imgname = "a-not-applicable.svg";
+                    imgcolor = "bg-melon";
+                    imgsrc = "Not Applicable";
+                }
+                $("#img00" + i + "").attr('src', "dist/images/" + imgname);
+                $("#img00" + i + "").attr('class', imgcolor + " border-10 mt-30");
+                $("#val00" + i + "").html(imgsrc);
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('#back-btn').on('click', function (e) {
+                window.history.go(-1);
+                return false;
+            })
+            $(".center").slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                centerMode: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                /*autoplay: true,
+                autoplaySpeed: 3000,*/
+            });
+            $(".lazy").slick({
+                lazyLoad: 'ondemand', // ondemand progressive anticipated
+                infinite: true
+            });
+        });
+    </script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+        $('.surveylink').click(function () {
+            Survey()
+        });
+        function Survey() {
+            SurveyDartSide.postMessage("survey");
+        }
+
+        $('.changeLanguage').click(function () {
+            changeLanguage();
+        });
+        function changeLanguage() {
+            ChangeLangDartSide.postMessage("false");
+        }
+    </script>
+    <script>
+
+        function selectlangen() { changeLanguage();
+            localStorage.setItem("language", "en");
+            window.Location.href = "../en/apply-for-job.html"
+
+
+        }
+        function selectlangar() { changeLanguage();
+            localStorage.setItem("language", "ar")
+
+        }
+    </script>
+<script src="../en/back.js"></script>
+
+</body>
+</html>

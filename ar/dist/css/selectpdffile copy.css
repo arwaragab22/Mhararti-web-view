@@ -1,0 +1,41 @@
+
+
+.center {
+    margin-top: 80px;
+    width: 100%;
+    height:400px;
+
+}
+.cv1{
+   
+    height: 100%;
+    width:100%;
+height: 400px
+}
+.cv2 {
+    
+    height: 100%;
+    width: 100%;
+    height:400px
+}
+
+    .cv3 {
+           
+            height: 100%;
+            width: 100%;
+            height: 400px}
+            .center img{
+                object-fit: contain;
+            }
+            
+iframe{
+    overflow: hidden;
+    
+}
+.operationoncv{
+    margin:auto;
+    width:fit-content;
+}
+.select-cv{
+    border:5px solid blue ;
+}

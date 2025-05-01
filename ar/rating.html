@@ -1,0 +1,488 @@
+﻿<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <title>Maharati</title>
+    <link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/bootstrap-slider.css"/>
+    <link href="dist/css/styles.css" rel="stylesheet">
+    <link href="" rel="stylesheet">   
+
+<style>
+  body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+  </style>
+    <style>
+        body{
+          direction: rtl;
+        }
+        footer .job-icon{
+    margin-left: 7px !important;
+  }
+      </style>
+    <!-- Custom styles for this template -->
+</head>
+<body style="direction: rtl">
+    <header class="fixed-top mb-5" style="direction: rtl">
+        <div class="navbar navbar-dark bg-primary">
+          <div class="container d-flex justify-content-between"> 
+            <a onclick="prevlink()" class="previous round text-white text-xl" style="direction: ltr;cursor: pointer;">❯</a>
+            <a href="home.html" class="navbar-brand d-flex align-items-center m-auto">
+              <img src="dist/images/logoAr.png" alt=""  height="30px;" /> 
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+             aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container-menu" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            </button>
+          </div>
+        </div>
+        <div class="collapse bg-primary shadow-sm" id="navbarHeader">
+           <div class="container p-1 text-center">
+            <div style="display:flex;margin:auto;justify-content: center;gap:18px; color:white">
+              <div><a style="cursor: pointer" href="../ar/rating.html">  <img src="../shared_dist/iconsmenu/Group.png"  width="20px" height="20px"/><p style="font-size: 11px;color: white;margin-top:4px">تقييمنا</p></a></div>
+              <div> <a class="surveylink" style="cursor: pointer" href=""><img src="../shared_dist/iconsmenu/Vector.png"  width="20px"  height="20px"/><p style="font-size: 11px;color: white;margin-top:4px">إستطلاع الرأى</p></a></div>
+           
+              <div><a style="cursor: pointer" onclick=" selectlangen()" href="../en/rating.html"><img src="../shared_dist/iconsmenu/Usflag.svg"  width="30px" height="22px"/><p style="font-size: 11px;color: white;margin-top:4px">اللغة</p></a></div>
+            </div>
+            <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+              <div style="width: 40%;"><a href="my-cv.html" style="color: white;">   
+                <img src="../shared_dist/iconsmenu/Group746.svg" width="55px"/>
+                <div style="margin-top:7px;font-size: 14px;">  منشئ السيرة الذاتية </div></a>
+             
+              </div>
+              <div  style="width: 40%;">
+                <a href="../ar/why-cv.html" style="color: white;"> 
+                <img src="../shared_dist/iconsmenu/Group747.png"  width="55px"/>
+                <div style="margin-top:7px;font-size: 14px;">إرشادات كتابة السيرة الذاتية  </div>
+                </a>
+              </div>
+              </div>
+              <div  style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly; " > 
+                <div  style="width: 40%;" >
+                  <a href="../ar/vr.html" style="color: white;"> 
+                <img src="../shared_dist/iconsmenu/Group749.png"  width="55px"/>
+                <div style="margin-top:7px ;font-size: 14px;">المقابلة</div>
+                </a>
+              </div>
+              <div   style="width: 40%;">
+                <a href="../ar/skills.html" style="color: white;"> 
+                <img src="../shared_dist/iconsmenu/Group748.png"  width="55px"/>
+                <div style="margin-top:7px;font-size: 14px;">تقييم المهارات</div>
+                </a>
+              </div>
+             
+            </div>
+            <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:18px ;justify-content: space-evenly;">
+              <div   style="width: 40%;">
+                <a href="../ar/marketing-myself.html" style="color: white;"> 
+                <img src="../shared_dist/iconsmenu/Group752.svg"  width="55px"/>
+                <div style="margin-top:7px;font-size: 14px;">تسويق نفسي</div>
+                </a>
+              </div>
+              <div   style="width: 40%;">  <a href="../ar/practice-interview.html" style="color: white;"> 
+                <img src="../shared_dist/iconsmenu/Group753.svg"  width="55px"/>
+                <div style="margin-top:7px;font-size: 14px;">ممارسة المقابلة</div>
+              </a>
+              </div>
+              </div>
+              <div style=" font-size:13px;display:flex;justify-content: center;color: white; margin-bottom:px ;justify-content: space-evenly;">
+                <div  style="width: 40%;">
+                  <a href="../ar/apply-for-job.html" style="color: white;" class="surveylink"> 
+                  <img src="../shared_dist/iconsmenu/Group750.svg"  width="55px"/>
+                  <div style="margin-top:7px;font-size: 14px;">وظائف شاغرة</div>
+                  </a>
+                </div>
+                <div  style="width: 40%;">
+                  <a href="../ar/job.html" style="color: white;"> 
+                  <img src="../shared_dist/iconsmenu/Group751.svg"  width="55px"/>
+                  <div style="margin-top:7px;font-size: 14px;">تحليل إعلان وظيفة</div>
+                  </a>
+                </div>
+                </div>
+            <!-- <p class="text-white text-12">يرجى اختيار لغتك</p>
+            <a   onclick="selectlangen()"  href="../en/apply-for-job.html" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4  mr-2 changeLanguage" > <span><img src="dist/images/en.svg" alt="" width="30px"/></span> English</a>
+            <a  onclick="selectlangar()"type="button" class="btn btn-light bg-transparent-50 text-white text-shadow pr-4 pl-4 ml-2"> <span><img src="../shared_dist/images/ar.svg" alt="" width="30px"/></span> العربية </a>
+          </div>
+            <div class="container pt-1 pb-2 text-center pr-5 pl-5">
+              <a type="button"class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block"href="rating.html"><span><img src="dist/images/rate.svg" alt="" width="30px" style="    margin-left: 8px;"/></span>قيم تطبيق مهاراتي</a>
+            </div>
+            <div class="container text-center pr-5 pl-5">
+              <a type="button" class="btn btn-light bg-transparent-20 border-0 text-white text-shadow pr-4 pl-4 btn-block surveylink" href="#"><span><img src="dist/images/survey.svg" alt="" width="30px"  style="    margin-left: 8px;"/></span>إستطلاع الرأى</a>  -->
+            </div> 
+          </div>
+        </div>
+        <img src="../shared_dist/images/menu-shad.svg" alt="" width="100%" />
+      </header>
+    
+    <main role="main" class="mb-100 mt-100">
+        <section class="pl-4 pr-4">
+            <div class="bg-primary border-30 pt-3 text-center">
+                <h2 class="text-white font-weight-bold">تقييم تطبيق مهاراتي </h2>
+                <div class="bg-white border-30 p-4 box-shad-2">
+                    <p>رجاء تقييم تجربتكم بشكل عام عند استخدام تطبيق مهاراتي من خلال توضيح مدى اتفاقكم مع كل جملة من الجمل التالية:</p>
+                    <p>أستطيع التصفح والوصول إلى المعلومات المختلفة داخل   تطبيق مهاراتي بسهولة</p>
+                    <p>
+                        <input id="Qu1" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu1CurrentSliderValLabel">تقييم: <span id="Qu1SliderVal" class="text-primary-deep font-weight-bold">محايد</span></div>
+                    </p>
+                    <p>بشكل عام، وجدت تطبيق مهاراتي مفيد أثناء بحثي عن عمل  </p>
+                    <p>
+                        <input id="Qu2" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu2CurrentSliderValLabel">تقييم: <span id="Qu2SliderVal" class="text-primary-deep font-weight-bold">محايد</span></div>
+                    </p>
+                    <p>بشكل عام، أنا راضٍ عن الخدمات التي تلقيتها من خلال تطبيق مهاراتي</p>
+                    <p>
+                        <input id="Qu3" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu3CurrentSliderValLabel">تقييم: <span id="Qu3SliderVal" class="text-primary-deep font-weight-bold">محايد</span></div>
+                    </p>
+                    <p>سوف أوصي أصدقائي أو أفراد من عائلتي بتحميل تطبيق مهاراتي</p>
+                    <p>
+                        <div class="form-check form-check-inline">
+                            <input name="question5" class="form-check-input" value="6" id="checkyes" type="radio" checked>
+                            <label class="form-check-label" for="checkyes"> نعم </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input name="question5" class="form-check-input" value="7" id="checkno" type="radio">
+                            <label class="form-check-label" for="checkno"> لا </label>
+                        </div>
+                    </p>
+                    <p>سوف أوصي أصدقائي أو أفراد من عائلتي بتحميل تطبيق مهاراتي</p>
+                    <p>
+                        <input id="Qu4" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="3" class="form-range" data-bs-toggle="tooltip" data-slider-ticks="[Poor, Good, Very Good, Excellent, Exceptional]" data-slider-ticks-tooltip="true" />
+                        <div id="Qu4CurrentSliderValLabel">تقييم: <span id="Qu4SliderVal" class="text-primary-deep font-weight-bold">محايد</span></div>
+                    </p>
+
+
+                    <p><a href="home.html" class="btn border-10 bg-primary font-weight-bold box-shad-2 text-white pr-4 pl-4 thankyou-btn"> شكرًا </a></p>
+                    <p id="share" class="valid-feedback"><a href="#" class="btn border-10 bg-primary font-weight-bold box-shad-2 text-white pr-4 pl-4"> <i class="bi bi-box-arrow-up-right align-text-bottom"></i> شارك تطبيق مهاراتى</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-muted fixed-bottom pt-3 pb-3 bg-footer">
+        <div class="row " style="display: flex; justify-content: space-evenly;padding: 0px 20px">
+          <div class="col-2 pl-0 "><a  style="text-align: center; "href="home.html" class="d-block"><img src="../shared_dist/images/icon-one.png" alt=""
+            width="40px"   height="40px" /></a></div>
+          <div class="col-2 pr-0 "><a style="text-align: left;" href="ar_instructions.html" class="d-block"><img
+                src="../shared_dist/images/icon-three.png" alt="" width="40px"   height="40px"/></a></div>
+      
+          <div class="col-2 job-icon" style="margin-top: -53px;
+          margin-left: 38px;"><a href="apply-for-job.html" class="d-block surveylink">
+              <img src="../shared_dist/images/job-icon.svg" alt="" width="70px" class="rounded-circle shadow" /></a></div>
+          <div class="col-2 pl-0 "><a  style="text-align: right;   " href="my-cv.html" class="d-block"><img src="../shared_dist/images/icon-two.png"
+                alt="" width="40px"   height="40px"/></a></div>
+      
+          <div class="col-2 pr-0 "><a   style="text-align: center;   " href="vr.html" class="d-block"><img src="../shared_dist/images/icon-four.png" alt=""
+                width="48px" height="40px" /></a></div>
+        </div>
+      </footer>
+      <script>
+      
+        function selectlangen() { changeLanguage();
+          localStorage.setItem("language", "en");
+          window.Location.href = "../en/apply-for-job.html"
+      
+      
+        }
+        function selectlangar(){changeLanguage();
+          localStorage.setItem("language", "ar")
+      
+        }
+      </script>
+
+    <script src="dist/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="dist/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="dist/js/bootstrap.js"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="dist/slick/slick.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="dist/bootstrap-slider.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#back-btn').on('click', function (e) {
+                window.history.go(-1);
+                return false;
+            });
+
+
+
+        });
+    </script>
+    <script type="text/javascript">
+
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            var q1val = localStorage.getItem("Qu1val");
+            var q2val = localStorage.getItem("Qu2val");
+            var q3val = localStorage.getItem("Qu3val");
+            var q4val = localStorage.getItem("Qu4val");
+
+
+
+
+
+
+            if (q4val > 3) {
+                $('#share').removeClass('valid-feedback');
+            }
+            else {
+                $('#share').addClass('valid-feedback');
+            }
+
+
+            //=localStorage.getItem("Qu5");
+
+            $("#Qu1SliderVal").text(localStorage.getItem("Qu1"));
+            $("#Qu2SliderVal").text(localStorage.getItem("Qu2"));
+            $("#Qu3SliderVal").text(localStorage.getItem("Qu3"));
+            $("#Qu4SliderVal").text(localStorage.getItem("Qu4"));
+
+            //$("#Qu5SliderVal").text(localStorage.getItem("Qu5"));
+
+
+if(!q1val){
+q1val=3;
+localStorage.setItem("Qu1val",3);
+$("#Qu1SliderVal").text("محايد");
+localStorage.getItem("Qu1","محايد");
+}
+if(!q2val){
+q2val=3;
+localStorage.setItem("Qu2val",3);
+$("#Qu2SliderVal").text("محايد");
+localStorage.getItem("Qu2","محايد");
+}
+if(!q3val){
+q3val=3;
+localStorage.setItem("Qu3val",3);
+$("#Qu3SliderVal").text("محايد");
+localStorage.getItem("Qu3","محايد");
+}
+if(!q4val){
+q4val=3;
+localStorage.setItem("Qu4val",3);
+$("#Qu4SliderVal").text("محايد");
+localStorage.getItem("Qu4","محايد");
+}
+
+
+
+            var radiocheck = localStorage.getItem("Qu5");
+			
+            if (radiocheck) {
+
+                $('input[name="question5"][value="' + radiocheck + '"]').prop('checked', true);
+} else {
+                localStorage.setItem("Qu5", 6);
+                radiocheck=6;
+                $('input[name="question5"][value="6"]').prop('checked', true);
+
+            }
+
+            var answerQ1;
+            var result1;
+            $("#Qu1").slider({
+                value: q1val,
+                formatter: function (value) {
+                    answerQ1 = value;
+                    switch (value) {
+                        case 1:
+                            result1 = "لا أوافق بشدة";
+                            break;
+                        case 2:
+                            result1 = "لا أوافق";
+                            break;
+                        case 3:
+                            result1 = "محايد";
+                            break;
+                        case 4:
+                            result1 = "أوافق";
+                            break;
+                        case 5:
+                            result1 = " أوافق بشدة ";
+                            break;
+                    }
+                    return result1;
+                },
+            });
+            $("#Qu1").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu1", result1);
+                localStorage.setItem("Qu1val", answerQ1);
+                $("#Qu1SliderVal").text(result1);
+            });
+
+            var answerQ2;
+            var result2;
+            $("#Qu2").slider({
+                value: q2val,
+                formatter: function (value) {
+                    answerQ2 = value;
+                    switch (value) {
+                        case 1:
+                            result2 = "لا أوافق بشدة";
+                            break;
+                        case 2:
+                            result2 = "لا أوافق";
+                            break;
+                        case 3:
+                            result2 = "محايد";
+                            break;
+                        case 4:
+                            result2 = "أوافق";
+                            break;
+                        case 5:
+                            result2 = " أوافق بشدة";
+                            break;
+                    }
+                    return result2;
+                },
+            });
+            $("#Qu2").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu2", result2);
+                localStorage.setItem("Qu2val", answerQ2);
+                $("#Qu2SliderVal").text(result2);
+            });
+            var answerQ3;
+            var result3;
+            $("#Qu3").slider({
+                value: q3val,
+                formatter: function (value) {
+                    answerQ3 = value;
+                    switch (value) {
+                        case 1:
+                            result3 = "لا أوافق بشدة";
+                            break;
+                        case 2:
+                            result3 = "لا أوافق";
+                            break;
+                        case 3:
+                            result3 = "محايد";
+                            break;
+                        case 4:
+                            result3 = "أوافق";
+                            break;
+                        case 5:
+                            result3 = " أوافق بشدة";
+                            break;
+                    }
+                    return result3;
+                },
+            });
+            $("#Qu3").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu3", result3);
+                localStorage.setItem("Qu3val", answerQ3);
+                $("#Qu3SliderVal").text(result3);
+            });
+            var answerQ4;
+            var result4;
+            $("#Qu4").slider({
+                value: q4val,
+                formatter: function (value) {
+                    answerQ4 = value;
+                    switch (value) {
+                        case 1:
+                            result4 = "لا أوافق بشدة";
+                            break;
+                        case 2:
+                            result4 = "لا أوافق";
+                            break;
+                        case 3:
+                            result4= "محايد";
+                            break;
+                        case 4:
+                            result4 = "أوافق";
+                            break;
+                        case 5:
+                            result4 = " أوافق بشدة";
+                            break;
+                    }
+                    return result4;
+                },
+            });
+            $("#Qu4").on("slide", function (slideEvt) {
+                localStorage.setItem("Qu4", result4);
+                if (result4 =="أوافق"||result4 ==" أوافق بشدة") {
+                    //document.getElementById("share").removeClass = "valid-feedback";
+                    $('#share').removeClass('valid-feedback');
+                }
+                else {
+                    $('#share').addClass('valid-feedback');
+                }
+                localStorage.setItem("Qu4val", answerQ4);
+                $("#Qu4SliderVal").text(result4);
+            });
+
+            var q5val;
+
+            var answerQ5;
+            $('input[name="question5"]').change(function () {
+                answerQ5 = $(this).val();
+                q5val = answerQ5;
+                localStorage.setItem("Qu5", $(this).val());
+            });
+
+            const iframe = document.querySelector('iframe');
+            const channel = new MessageChannel();
+            const port1 = channel.port1;
+
+            function ThankYouFunction() {
+                ThankYouFunctionDartside.postMessage(answerQ1 + ',' + answerQ2 + ',' + answerQ3 + ',' + answerQ4 + ',' + radiocheck);
+            }
+
+            function ShareUserLink() {
+                ShareLinkDartSide.postMessage("share");
+            }
+
+            $('.thankyou-btn').click(function () {
+                ThankYouFunction();
+            });
+
+
+            $('#share a').click(function () {
+                ShareUserLink();
+            });
+
+            $('.surveylink').click(function () {
+                Survey();
+            });
+
+            function Survey() {
+                 SurveyDartSide.postMessage("survey");
+            }
+
+            $('.changeLanguage').click(function(){
+              changeLanguage();
+             });
+            function changeLanguage(){
+	            ChangeLangDartSide.postMessage("true");
+            }
+
+        });
+
+
+
+
+    </script>
+<script src="../ar/back.js"></script>
+</body>
+</html>

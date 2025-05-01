@@ -1,0 +1,168 @@
+.container{
+    margin-top: 20px;
+}
+.internet{
+	margin: 0px auto 140px;
+	text-align: center;
+	color:red;
+	
+}
+
+.name-scv1{
+text-transform: capitalize;
+    font-size: 25px;
+    font-weight: bold;
+    color: #2d4677;
+}
+.job-scv1{
+  
+    font-size: 21px;
+    font-weight: 200;
+
+}header >img{
+	margin-top: -1px;
+}
+.mob-scv1{
+
+}
+.email-scv1{
+
+}
+.dd-scv1{
+
+}
+svg{
+    color: white;
+    font-size:25px
+}
+.head-scv1{
+    margin-top:20px;
+
+    align-items: flex-start;
+
+
+}
+.head-scv1 svg{
+    background-color: #4a4a4a;
+    padding: 3px;
+font-size:20px;
+margin-right:5px;
+padding: 3px;
+font-size: 24px;
+border-radius: 4px;
+margin-right: 10px;
+
+}
+infocontact-scv1{
+
+}
+main{
+    margin-top: 20px;
+ 
+    font-weight: 500;
+}
+.exp{
+    margin-top: 20px;
+}
+.Education,.skills ,.reference ,.summary{
+  
+}
+.exp svg ,.Education svg, .Experience svg,.skills svg, .reference svg ,.summary svg,.additional svg ,.jobObjective svg{ 
+    
+    
+width: 37px !important;
+    height: 36px;
+    padding: 5px;
+}
+.exp-header,.Education-header,.Experience-header,.skills-header,.reference-header ,.summary-header,.add-header{
+    background-color:#2d4677 ;
+  padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+
+    
+
+}
+  .exp .exp-body  .container-exp .exp-head ,.edu-head{
+     display: flex;
+align-items: center;
+   
+ }
+.exp-body{
+margin: 20px  0px 0px 0px;
+}
+.edu-body,.ski-body{
+    margin: 20px 0px;
+}
+ .container-exp{
+
+ }
+p{
+    margin-bottom: 0px;
+}
+   .exp-body .year,.edu-body .year{
+    margin-right: 5px;
+
+
+   }
+.exp-body .company,.edu-head .university{
+margin: 0px;
+   
+  
+  
+}
+   
+.exp-body .exp-details ,.Education .details{
+
+  
+    line-height: 1.5;
+  
+    
+
+
+}
+h4{
+    text-transform: capitalize;
+}
+.edu-body .training, .edu-body .course{
+ 
+}
+.edu-body .training span,
+.edu-body .course span {
+
+
+}
+.training span ,.course span{
+ 
+}
+.skill{
+
+
+}
+.skill div{
+
+ 
+}
+
+.ref-body{
+   
+}
+.ref-body .ref-job{
+    text-transform: capitalize;
+}
+.ref-body .ref-details{
+    display: flex;
+    flex-direction: column;
+}
+.ref-body .ref-details span:first-of-type
+{
+    text-transform: capitalize;
+}
+.additional .add-body{
+
+}
+.additional .add-title{
+    text-transform: capitalize;
+}

@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <title>CV</title>
+    <link rel="icon" href="../shared_dist/images/logo-icon.gif" type="image/gif" sizes="16x16">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="dist/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+    <link href="dist/css/cv-gray.css" rel="stylesheet" type="text/css">
+
+    <script src="../objectorianted.js"></script>
+    <style>
+        @page {
+            size: auto;
+            /* auto is the initial value */
+
+            /* this affects the margin in the printer settings */
+            margin: 15mm 5mm 5mm 15mm;
+        }
+
+        html,
+        body {
+            width: 210mm !important;
+            height: 297mm !important;
+        }
+
+        body {
+            padding: 32px;
+            direction: rtl;
+            font-family: 'Cairo', sans-serif;
+            font-family: 'Overpass', sans-serif;
+            line-height: normal;
+            font-size: 18px;
+            line-height: initial;
+        }
+
+        * {}
+
+        .exp-head {
+            display: flex;
+
+        }
+
+        .edu-head {
+            display: flex;
+            gap: 10px;
+            text-transform: capitalize;
+        }
+
+        .edu-body .details {}
+
+        .ed-cit {}
+
+        .horizontal {
+            display: flex;
+            gap: 30px;
+            text-transform: capitalize;
+        }
+
+        .ref-job {
+            text-transform: capitalize;
+        }
+    </style>
+    <script type="text/javascript" src="dist/js/Fontawesome.js"></script>
+</head>
+
+<body style="padding: 3px;direction: rtl;">
+
+    <div class="container-fluid " style="margin-top:30px;padding: 14px;">
+
+        <div class="pb-1">
+            <div class="pb-1 text-center">
+                <div id="fullName"> <span class="h1 text-uppercase font-weight-bold name name-scv1">Name Surname</span>
+                </div>
+                <div class=""><span id="address" class="text-uppercase" style="display: block;margin:10px">Address here
+                        Address
+                        here</span></div>
+                <div class=""><span class="countrycity" class=""></span></div>
+            </div>
+
+            <div style="text-align: center">
+
+                <div style="display: flex;justify-content:space-between;">
+                    <div class="text-right">
+                        <div style="text-align: center"><a id="emailAddress" href="mailto:email@address.com" class=""
+                                style="text-decoration: none;">email@address.com</a></div>
+                        <div class="postal" style="float:right"></div>
+                    </div>
+                    <div>
+                        <div id="mobileNum">02 01222222222</div>
+                        <div class="phone ">02 01222222222</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="experiences ">
+            <hr class="border-top-2 ">
+            <div class="h4 bg-purple" style="text-transform:capitalize;">الهدف الوظيفى </div>
+            <main class="obj-body" style="margin: 20px 20px 44px 20px;"></main>
+        </div>
+        <div class="summary ">
+            <hr class="border-top-2 ">
+            <div class="h4 bg-purple" style="text-transform:capitalize;"> الملخص </div>
+            <div class="sum-body" style="margin: 20px 20px 44px 20px;"></div>
+        </div>
+
+        <div class="exp">
+            <hr class="border-top-2">
+            <div class=" cv-body">
+
+
+            </div>
+            <div class="h4 bg-purple">التاريخ الوظيفي</div>
+            <div class="exp-body" style="margin: 20px 20px 44px 20px;"></div>
+        </div>
+        <div class="educations ">
+            <hr class="border-top-2">
+            <div class="h4 bg-purple">التعليم</div>
+            <div>
+
+                <div class="border-purple  timeline-purple">
+                    <div class="">
+                        <div class="pr-2 edu-body" style="margin: 20px 20px 44px 20px;">
+                            <!-- <div class="itemtitle" id="degree">Degree </div>
+              <div class="itemtitle" > </div>
+              <div class="itemtitle" id="academy">academy </div>
+              <div class="itemtitle" >&nbsp; - &nbsp;</div>
+              <div class="itemtitle" id="edugovernoratename"> edugovernoratename </div>
+              <div class="itemtitle" > , &nbsp;</div>
+              <div class="itemtitle" id="educountryname">educountryname </div> -->
+
+                        </div>
+
+                        <div class="training" style="margin:0px 20px 40px 20px;"> </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="skills ">
+
+            <hr class="border-top-2">
+            <div class="h4 bg-purple">مجالات الخبرة</div>
+            <div class="ski-body" style="margin: 20px 20px 44px 20px;"></div>
+        </div>
+
+
+        <div class="additionalsection  additional">
+
+        </div>
+
+        <div class="references pb-1">
+            <hr class="border-top-2">
+            <div class="h4 bg-purple">المراجع</div>
+            <div class="ref-body" style="margin-top:10px;margin: 20px 20px 44px 20px;"></div>
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/popper.min.js"></script>
+
+<script>
+
+
+    cvbuilder = readystate();
+    console.log(cvbuilder)
+
+    if (cvbuilder.cvar.summaryar) {
+      if (cvbuilder.cvar.summaryar.summary) {
+        console.log("done");
+
+        document.getElementsByClassName("sum-body")[0].innerHTML = cvbuilder.cvar.summaryar.summary.replaceAll("•", `<br>•`);
+      }
+    }
+
+    cvbuilder = readystate();
+
+    if (cvbuilder.cvar.summaryar) {
+      if (cvbuilder.cvar.summaryar.summary) {
+        console.log("done");
+        document.getElementsByClassName("summary")[0].style.display = "block"
+      }
+    }
+    if (cvbuilder.cvar.summaryar) {
+      if (!cvbuilder.cvar.summaryar.summary) {
+        console.log("done");
+        document.getElementsByClassName("summary")[0].style.display = "none"
+      }
+    }
+    if (!cvbuilder.cvar.summaryar) {
+
+      console.log("done");
+      document.getElementsByClassName("summary")[0].style.display = "none"
+
+    }
+
+
+    object = localStorage.getItem("jobobjective");
+    document.getElementsByTagName("main")[0].innerHTML = object.replaceAll("•", `<br>•`);
+    let fullname = localStorage.getItem("fullname");
+    console.log(fullname);
+
+    
+    document.getElementsByClassName("name-scv1")[0].innerHTML = fullname;
+
+    let mobile = cvbuilder.cvar.personalinformation.mobile;
+    document.getElementById("mobileNum").innerHTML = mobile;
+    let email = cvbuilder.cvar.personalinformation.email;
+    document.getElementById("emailAddress").innerHTML = email;
+    let address = cvbuilder.cvar.personalinformation.address;
+    document.getElementById("address").innerHTML = address;
+    let city = cvbuilder.cvar.personalinformation.governoratename;
+    document.getElementsByClassName("countrycity")[0].innerHTML = city;
+    let country = cvbuilder.cvar.personalinformation.countryname;
+    document.getElementsByClassName("countrycity")[0].innerHTML += " " + country;
+    let homephone = cvbuilder.cvar.personalinformation.phone;
+    document.getElementsByClassName("phone")[0].innerHTML = homephone;
+    let zipcode = cvbuilder.cvar.personalinformation.zipcode;
+    document.getElementsByClassName("postal")[0].innerHTML = zipcode && '<i class="fa fa-fax"style="width: 25px;height:28px;  font-weight: bold;" ></i>' + zipcode;
+
+  
+    exp = JSON.parse(localStorage.getItem("cvbuilder")).cvar.experience_data;
+    if (cvbuilder.cvar.experience_data.length > 0) {
+
+
+      if (exp.length > 0) {
+        for (let i = 0; i < exp.length; i++) {
+          document.getElementsByClassName("exp-body")[0].innerHTML += `
+<div class="container-exp">
+<div class=exp-head>
+  <div > <span class="year">${exp[i].expitem[0]}</span> -  
+  <span class="year">${exp[i].expitem[1]}</span></div>
+<p class="company">${exp[i].expitem[2]}</p>
+  </div>
+
+<p class="exp-details">.${exp[i].expitem[3]}<p>
+</div>
+
+
+`}
+      }
+
+    }
+
+    let education = cvbuilder.cvar.educationex_data;
+    if (education) {
+
+      if (education.length > 0) {
+        for (let i = 0; i < education.length; i++) {
+          if (education[i] !== null) {
+            console.log(education[i]);
+            document.getElementsByClassName("edu-body")[0].innerHTML += `
+<div class="container-exp">
+<div class="edu-head" style="display:flex ;justify-content: space-between;">
+  <div style="flex:2">
+   <span class="year" style="">${education[i].eduxitem[0]}</span>&nbsp;&nbsp;-
+    <span class="year" style="">${education[i].eduxitem[1]}</span> 
+   </div>
+  <div style="flex:3">
+  <p class="university" style="font-weight:900">${education[i].eduxitem[3]}</p>
+
+
+
+  <div class="university" >${education[i].eduxitem[2]}</div>
+
+<br>
+<div class="ed-cit">   
+
+
+  
+${(() => {
+                if (education[i].eduxitem[6].length > 0) {
+                  return (
+                    `    <div class="course" style="width:100%;">   <div > <span class="font-weight-bold"> الدورات الدراسية 
+  :</span></div> <p style="max-width:100%;" >${education[i].eduxitem[6].replaceAll("•", `<br>•`)}</p></div>
+`                  )
+                }
+
+                else {
+                  return ""
+                }
+              })()}
+ 
+
+ </div>
+
+
+
+
+</div>
+
+<br>
+<br>
+`}
+        }
+
+      }
+
+      if (cvbuilder.cvar.skills) {
+        if (cvbuilder.cvar.skills.length > 0) {
+          var skills = cvbuilder.cvar.skills;
+          if (skills.length > 0) {
+            let arrayskills = ["المهارات الشخصية", "المهارات التسويقية", "المهارات الإدارية", "مهارات المبيعات", "مهارات التصميم", "مهارات تقنية",
+              "مهارات حسابية ومالية", "مهارات تعليمية", "مهارات تطوير الشبكات", "تحليل الأعمال", "مهارت إضافية"
+            ];
+
+            for (let i = 0; i < skills.length; i++) {
+              if (skills[i].length > 0) {
+
+
+                for (let j = 0; j < skills[i].length; j++) {
+                  if (skills[i][j]) {
+
+                    console.log(skills[i])
+                    if (cvbuilder.cvar.cvtype != "السيرة الذاتية المرتبة زمنياً") {
+
+                      document.getElementsByClassName("ski-body")[0].innerHTML += `
+       
+<div class="skill" style="width: fit-content">
+
+  
+<div style="font-size:16px ;font-weight: bold;">${j == 0 ? arrayskills[i] : ""}</div>
+<div style="flex:3">
+  <span ">${skills[i][j].input} &nbsp;</span><span>${skills[i][j].textarea && ':'}</span>
+
+  <div style=""> ${skills[i][j].textarea && skills[i][j].textarea.replaceAll("•", `<br>•`)}</div>
+ 
+  </div>
+`}
+
+
+                    if (cvbuilder.cvar.cvtype == "السيرة الذاتية المرتبة زمنياً") {
+
+                      document.getElementsByClassName("ski-body")[0].innerHTML += `
+
+<div class="skill" style="width: fit-content">
+
+
+<span style="font-weight: bold;text-transform: capitalize;margin-top:10px;display: inline-block;font-size:16px;height: fit-content;
+display: block;">${j == 0 ? arrayskills[i] : ""}</span>
+<div style="display:flex">  <div style="text-transform: capitalize;margin-top:10px;font-size:16px;flex:2"> ${skills[i][j].input}&nbsp;</div>
+</div>
+
+</div>
+`}
+                  }
+                }
+              }
+
+            }
+
+          }
+        }
+      }
+    
+
+
+
+    }
+
+
+    skills = cvbuilder.cvar.skills;
+    if (localStorage.getItem("skillsarray")) {
+      ;
+
+      let countskibody = 0;
+      for (let i = 0; i < skills.length; i++) {
+        if (skills[i].length == 0) {
+          countskibody++;
+        }
+      }
+      if (+countskibody == +skills.length) {
+        console.log(skills.length);
+        console.log(countskibody);
+
+        document.getElementsByClassName("skills")[0].innerHTML = "";
+      }
+
+    }
+    if (!cvbuilder.cvar.skills) {
+      document.getElementsByClassName("ski-body")[0].innerHTML = "";
+    }
+    if (cvbuilder.cvar.skills.length == 0) {
+      document.getElementsByClassName("ski-body")[0].innerHTML = "";
+    }
+  
+
+  
+  
+
+
+
+  cvbuilder = readystate();
+  let reference = cvbuilder.cvar.references;
+  if (reference.refrequest === 0) {
+    document.getElementsByClassName("ref-body")[0].innerHTML = "المراجع المهنية عند الطلب";
+  }
+  if (reference.refrequest === 0) {
+    let refdata = JSON.parse(localStorage.getItem("references_data"));
+    console.log(refdata);
+    for (let i = 0; i < refdata.length; i++) {
+      if (refdata[i]) {
+        if (refdata[i].refitem.length > 0) {
+          document.getElementsByClassName("ref-body")[0].innerHTML += `
+      
+      <div class="ref-body">
+ 
+        <div class="ref-details" style="display: flex;
+    justify-content: space-between;">
+          <span style="margin-top:10px">${refdata[i].refitem[0]}</span>
+          <span style="margin-top:10px">${refdata[i].refitem[3]}</span>
+       
+          </div>
+        </div>
+
+      
+      
+      `
+
+
+        }
+      }
+    }
+  }
+
+
+
+
+    let exp = JSON.parse(localStorage.getItem("cvbuilder")).cvar.experience_data;
+    if (cvbuilder.cvar.experience_data.length > 0) {
+
+        console.log("exp")
+        if (exp.length > 0) {
+      for (let i = 0; i < exp.length; i++) {
+        if (exp[i] !== null) {
+          document.getElementsByClassName("exp-body")[0].innerHTML += `
+  <div class="container-exp">
+    <div class=exp-head style="display:flex;
+    justify-content: space-between;
+
+    margin-top:20px"
+}>    <div style="flex:2" > <span class="year" style="font-size:16px">${exp[i].expitem[0]}</span>&nbsp;&nbsp;-
+      <span class="year"  style="font-size:16px">${exp[i].expitem[1] == "Present" ? "الى الوقت الحالى" : exp[i].expitem[1]}</span></div>
+  
+      <div style="flex:3">
+    
+    <p class="company" style="text-transform:capitalize;font-size:20px;font-weight:900">${exp[i].expitem[3]}</p>
+   
+
+
+ 
+     <p class="" style="font-size:16px">${exp[i].expitem[2]}<p>
+      <p style= "style="font-size:16px"" >${exp[i].expitem[6].replaceAll("•", `<br>•`)}</p>
+      </div>
+</div>
+  
+
+  `}
+      }
+    }
+    if (exp.length == 1 && exp[0] == null) {
+
+      document.getElementsByClassName("exp-body ")[0].innerHTML = "";
+    }
+
+  }
+
+
+  
+
+  if (cvbuilder.cvar.experience_data) {
+    if (cvbuilder.cvar.experience_data == 0) {
+      document.getElementsByClassName("exp")[0].innerHTML = "";
+    }
+    if (!cvbuilder.cvar.experience_data) {
+
+      document.getElementsByClassName("exp")[0].innerHTML = "";
+
+    }
+  }
+  
+
+
+  if (cvbuilder.cvar.addsection) {
+
+    if (cvbuilder.cvar.addsection.length > 0) {
+      let additionaray = cvbuilder.cvar.addsection
+      for (let i = 0; i < additionaray.length; i++) {
+        //  if(additionaray[i][0]){
+        console.log("here div add");
+        document.getElementsByClassName("additionalsection")[0].innerHTML += `
+         
+         <div>
+           <hr class="border-top-2">
+        <div class="h4 bg-purple">${additionaray[i].title}</div>
+        <div class="add-body" style="margin: 20px 20px 44px 20px;
+">
+          <span>${additionaray[i].desc.replaceAll("•", `<br>•`)}</span>
+
+        
+        </div>
+         </div>
+         `
+          }
+
+      }
+    }
+    else {
+      document.getElementsByClassName("additional")[0].innerHTML = ""
+    }
+
+    if (cvbuilder.cvar.addsection.length == 0) {
+      document.getElementsByClassName("additional")[0].innerHTML = ""
+    }
+  
+  if (!cvbuilder.cvar.addsection) {
+    document.getElementsByClassName("additional")[0].innerHTML = ""
+  }
+
+
+
+
+    cvbuilder = readystate();
+    if (cvbuilder.cvar.training) {
+        document.getElementsByClassName("training")[0].innerHTML =
+            `<span class="font-weight-bold"> التدريبات:</span> <p style="padding-top:10px" >${cvbuilder.cvar.training.replaceAll("•", `<br>•`)}</p>`
+    }
+
+    if (localStorage.getItem("fullname") === null) {
+        document.title = 'My Cv';
+    } else {
+        document.title = localStorage.getItem("fullname") + "_السيرة الذاتية";
+    }
+    if (!localStorage.getItem("phone")) {
+        document.getElementsByClassName("phone")[0].style.display = "none"
+    }
+</script>
+</body>
+
+</html>
