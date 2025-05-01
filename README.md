@@ -8,10 +8,7 @@
 
 Maharty is a **mobile app** that uses a **WebView** to display a fully responsive web-based interface built with front-end technologies. The goal is to offer a simple and accessible experience for users from different backgrounds.
 
-> ⚠️ **Important Instructions:**  
-> Please make sure to **grant all required permissions** when you start using the app to ensure it works properly.
 
----
 
 ## 💻 Technologies Used
 
@@ -32,11 +29,7 @@ I was fully responsible for the **front-end development** of the application. My
 
 ---
 
-## 📸 Screenshots
 
-_Add screenshots or mockups of the application interface here._
-
----
 
 ## 🚀 How to Use
 
